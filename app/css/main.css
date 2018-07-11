@@ -36,6 +36,10 @@ html, body {
   overflow-x: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 button {
   cursor: pointer;
 }
@@ -399,15 +403,15 @@ a.logo {
 .header__breadcrumbs-list li {
   font-size: 0.6875em;
   text-transform: uppercase;
-  color: #aeaeae;
+  color: #585858;
 }
 
 .header__breadcrumbs-list li a {
   display: inline-block;
 }
 
-.header__breadcrumbs-list li:first-of-type {
-  color: #585858;
+.header__breadcrumbs-list li:last-of-type {
+  color: #aeaeae;
 }
 
 .header__breadcrumbs-list li:before {
@@ -1275,24 +1279,6 @@ a.logo {
   margin-top: 0.45rem;
 }
 
-.arrow {
-  border: 0;
-  background-color: transparent;
-  background: url(../img/arrow-controls.svg) no-repeat center;
-  background-size: cover;
-  width: 1.0625rem;
-  height: 0.625rem;
-  display: block;
-}
-
-.arrow.arrow--prev {
-  transform: rotate(90deg);
-}
-
-.arrow.arrow--next {
-  transform: rotate(-90deg);
-}
-
 .banner {
   background-position: center;
   background-size: cover;
@@ -1333,6 +1319,170 @@ a.logo {
   margin-top: 1.2rem;
   padding-left: 2.12500rem;
   padding-right: 2.12500rem;
+}
+
+.share__btn {
+  display: block;
+  width: 1.1875rem;
+  height: 0.75rem;
+  background: url(../img/share.svg) no-repeat center;
+  background-size: cover;
+}
+
+.product__slider {
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.product__slide {
+  transition: 0.4s all ease;
+  transform: scale(0.83);
+}
+
+.product__slide-inner {
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  transition: 0.4s all ease;
+}
+
+.product__slide-img {
+  position: relative;
+}
+
+.product__slide-img:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s all ease;
+}
+
+.product__slide.slick-center {
+  transform: scale(1.1);
+}
+
+.product__slide.slick-center img {
+  max-width: 31.25rem;
+}
+
+.product__slide.slick-center .product__slide-img:before {
+  opacity: 0;
+}
+
+.product__slide img {
+  display: block;
+  height: auto;
+  margin: auto;
+  transition: 0.4s all ease;
+  max-width: 31.25rem;
+}
+
+.product__top {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.product__top .caption-inner {
+  margin-right: 3rem;
+}
+
+.product__descr {
+  margin-bottom: 2.62500rem;
+}
+
+.product__descr p {
+  font-size: 0.8125em;
+  line-height: 1.69230769;
+  color: #474646;
+  margin-bottom: 0.7rem;
+}
+
+.product__descr p:last-of-type {
+  margin-bottom: 0;
+}
+
+.product__gallery {
+  max-width: 1170px;
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.product__gallery .slick-active[tabindex="-1"] .product__slide-inner {
+  transform: translateX(4rem);
+}
+
+.product__gallery .slick-active[tabindex="0"] .product__slide-inner {
+  transform: translateX(-4rem);
+}
+
+.product__gallery .slick-slide {
+  position: relative;
+  z-index: 2;
+}
+
+.product__gallery .slick-center {
+  z-index: 4;
+}
+
+.product__gallery .slick-center + .slick-slide {
+  z-index: 3;
+}
+
+.arrow {
+  border: 0;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/arrow-controls.svg);
+  background-size: cover;
+  width: 1.0625rem;
+  height: 0.625rem;
+  display: block;
+}
+
+.arrow.arrow-gallery {
+  background-image: url(../img/arrow-controls-gallery.svg);
+  background-size: 1.0625rem 0.625rem;
+  width: 2.1875rem;
+  border-radius: 50%;
+  height: 2.1875rem;
+  position: absolute;
+  border: 1px solid #ffffff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow.arrow--prev-gallery {
+  left: 21.3675214%;
+}
+
+.arrow.arrow--next-gallery {
+  right: 21.3675214%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.arrow.arrow--prev {
+  transform: rotate(90deg);
+}
+
+.arrow.arrow--next {
+  transform: rotate(-90deg);
 }
 
 .advantages__item {
