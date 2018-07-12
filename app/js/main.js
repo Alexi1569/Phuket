@@ -110,8 +110,14 @@ jQuery(document).ready(function($) {
 	}
 
 	if ($('#js-select-date').length) {
+		console.log(moment())
 		$('#js-select-date').daterangepicker({
 			opens: 'center',
+			startDate: moment(),
+			endDate: moment().add(5, 'days'),
+			locale: {
+				format: 'DD-MM-YYYY',
+			}
 		});
 	}
 
