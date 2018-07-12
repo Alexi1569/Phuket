@@ -2,6 +2,14 @@
 jQuery(document).ready(function($) {
 	var w = $(window).outerWidth();
 
+	function rentPageFooter() {
+		var height = $('.rent').find('.footer').outerHeight() + 60;
+
+		$('.rent').css({
+			'padding-bottom': height + 'px',
+		})
+	}
+
 	$(window).resize(function() {
 		w = $(window).outerWidth();
 		rentPageFooter();
@@ -24,32 +32,49 @@ jQuery(document).ready(function($) {
 	}
 
 	if ($('#js-product-slider').length) {
+
 		var $productsSlider = $('#js-product-slider');
 
+		function alignCenter() {
+			var $centerSlide = $productsSlider.find('.slick-slide.slick-current.slick-active.slick-center');
+			var w = $centerSlide.outerWidth();
+			var $img = $centerSlide.find('img');
+			var imgWidth = $img.outerWidth();
+
+			$img.css({
+				'transform': 'translateX(-' + ((imgWidth - w) / 2) + 'px) scale(1)',
+				'opacity': '1',
+			});
+
+		}
+
+		function alignSlides() {
+			var stHeight = $productsSlider.find('.slick-track').height();
+			$productsSlider.find('.slick-slide').css('height',stHeight + 'px' );
+		}
+
+		$productsSlider.on('afterChange', function(event, slick, currentSlide){
+		  alignCenter();
+		});
+
 		$productsSlider.on('init', function() {
-
-			function alignSlides() {
-				var stHeight = $productsSlider.find('.slick-track').height();
-				$productsSlider.find('.slick-slide').css('height',stHeight + 'px' );
-			}
-
 
 			setTimeout(function() {
 				$productsSlider.css({
 					'opacity': '1',
 				})
 			}, 500);
-			
 
 			setTimeout(function() {
 				alignSlides();
+				alignCenter();
 			}, 0);
 		});
-
+		
 		$productsSlider.slick({
 			slidesToShow: 3,
 		  centerMode: true,
-		  variableWidth: true,
+		  centerPadding: '0px',
 		  appendArrows: '.product__controls',
 		  prevArrow: '<button class="arrow arrow-gallery arrow--prev-gallery"></button>',
 		  nextArrow: '<button class="arrow arrow-gallery arrow--next-gallery"></button>',
@@ -91,13 +116,6 @@ jQuery(document).ready(function($) {
 	}
 
 	if ($('.rent').length) {
-		function rentPageFooter() {
-			var height = $('.rent').find('.footer').outerHeight() + 60;
-
-			$('.rent').css({
-				'padding-bottom': height + 'px',
-			})
-		}
 
 		rentPageFooter();
 	}

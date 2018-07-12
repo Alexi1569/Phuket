@@ -182,12 +182,13 @@ input[type="submit"]
 	opacity: 1
 	
 .form
-	&__group
+	&__group	
 		&.form__group--white
 			input:not([type="submit"])
 				border: 0
 		text-align: left
-		input:not([type="submit"])
+		input:not([type="submit"]),
+		textarea
 			background-color: #fff
 			border: 1px solid #c5c5c5
 			width: 100%
@@ -320,8 +321,9 @@ a.logo
 			display: -ms-flex
 			display: -o-flex
 			display: flex
-			align-items: stretch
+			align-items: flex-start
 			justify-content: flex-start
+			flex-wrap: wrap
 			li
 				font-size: 0.6875em
 				text-transform: uppercase
@@ -1028,23 +1030,181 @@ a.logo
 
 
 .product
-	&__slider
-		opacity: 0
-		transition: 1s all ease
-	&__slide
-		transition: 0.4s all ease
-		transform: scale(0.83)
-		&-inner
-			height: 100%
+	&__cta
+		margin-top: 4.37500rem
+		& > .container
 			display: -webkit-flex
 			display: -moz-flex
 			display: -ms-flex
 			display: -o-flex
 			display: flex
+			align-items: flex-start
+			justify-content: space-between
+	&__form
+		width: 50%
+		&-submit
+			width: 100%
+			margin-top: 1.87500rem
+		&-content
+			&-bottom
+				margin-top: 1rem
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: stretch
+				justify-content: space-between
+				&-left
+					width: 40%
+					.form__group
+						&:last-of-type
+							.form__group-label
+								margin-top: 1rem
+				&-right
+					width: 54.5%
+					textarea
+						height: 86%
+						resize: none
+						max-height: 100%
+						max-width: 100%
+						overflow-y: hidden
+			&-top
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: stretch
+				justify-content: space-between
+			.form__group-label
+				margin-bottom: 0.3rem
+			.form__group
+				&:first-child
+					width: 40%
+				&:last-child
+					width: 54.5%
+	&__video
+		height: 0
+		padding-bottom: 25.1%
+		position: relative
+		width: 44.7368421%
+		iframe
+			border: 0
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	&__map
+		margin-top: 4.37500rem
+		& > .container
+			height: 18.12500rem
+		iframe
+			width: 100%
+			height: 100%
+			border: 0
+			display: block
+	&__info
+		margin-top: 3.12500rem
+		& > .container
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: stretch
+			justify-content: space-between
+		&-title
+			letter-spacing: 0.0001em
+			color: $accent
+			font-family: $bold
+			text-transform: uppercase
+			margin-bottom: 1.25rem
+			font-size: 1em
+			display: block
+	&__details
+		margin-right: 7%
+		&-list
+			letter-spacing: 0.0025em
+			font-size: 0.875em
+			border-collapse: separate 
+			border-spacing: 0 0.375rem
+			tr
+				td:first-of-type
+					padding-right: 6.25rem
+				&.product__details-list--price
+					td.product__details-list--descr
+						color: $text
+						font-family: $bold
+						font-size: 1.14285714em
+				td.product__details-list--title
+					color: $text
+				td.product__details-list--descr
+					color: #434343
+	&__advantages
+		&-list
+			tr
+				vertical-align: top
+				td
+					padding-right: 4.4rem
+					&:last-child
+						padding-right: 0
+					p
+						font-size: 0.8125em
+						margin-bottom: 0.75rem
+						&:last-of-type
+							margin-bottom: 0
+						&:before
+							content: ''
+							display: inline-block
+							vertical-align: sub
+							margin-right: 0.75rem
+							width: 1rem
+							height: 1rem
+							border-radius: 3px
+							background-position: center
+							background-repeat: no-repeat
+						&.product__advantages-list--true
+							color: $text
+							&:before
+								background-color: #5faf85
+								background-image: url(../img/checked-product-page.svg)
+								background-size: 8px 6px
+						&.product__advantages-list--false
+							color: #969696
+							&:before
+								background-color: #c5c5c5
+								background-image: url(../img/close-product-page.svg)
+								background-size: 6px
+	&__slider
+		opacity: 0
+		transition: 1s all ease
+		.slick-slide img
+			max-width: 
+	&__slide:not(.slick-active)
+
+		transform: scale(0)
+
+	&__slide.slick-active:not(.slick-center)
+		.product__slide-inner
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			height: 100%
 			align-items: center
 			transition: 0.4s all ease
+		.product__slide-img
+			width: 100%
+			img
+				transform: none !important
+	&__slide
+		transition: 0.4s all ease
 		&-img
 			position: relative
+			
 			&:before
 				content: ''
 				display: block
@@ -1053,21 +1213,25 @@ a.logo
 				top: 0
 				bottom: 0
 				right: 0
+				z-index: 1
 				opacity: 1
 				background-color: rgba(#000000, .5)
-				transition: 0.3s all ease
+				transition: 0.4s all ease
 		&.slick-center
-			transform: scale(1.1)
-			img
-				max-width: 31.25rem
 			.product__slide-img:before
 				opacity: 0
+			.product__slide-img
+				width: 31.25rem
+				img
+					max-width: 100%
+					transform: scale(0.8)
+					opacity: 0
+					transition: 0.3s opacity ease
 		img
 			display: block
 			height: auto
 			margin: auto
-			transition: 0.4s all ease
-			max-width: 31.25rem
+			max-width: 100%
 	&__top
 		display: -webkit-flex
 		display: -moz-flex
@@ -1092,10 +1256,6 @@ a.logo
 		width: auto
 		margin: 0 auto
 		position: relative
-		.slick-active[tabindex="-1"] .product__slide-inner
-			transform: translateX(4rem)
-		.slick-active[tabindex="0"] .product__slide-inner
-			transform: translateX(-4rem)
 		.slick-slide
 			position: relative
 			z-index: 2
@@ -1103,7 +1263,6 @@ a.logo
 			z-index: 4
 		.slick-center + .slick-slide
 			z-index: 3
-
 
 .arrow
 	border: 0
@@ -1510,6 +1669,12 @@ a.logo
 		padding-right: 1.3rem
 	.offers__item-prices
 		font-size: 14px
+	.product__slide.slick-center .product__slide-img
+		width: 28rem
+	.arrow.arrow--prev-gallery
+		left: 18%
+	.arrow.arrow--next-gallery
+		right: 18%
 	.banner
 		min-height: 27rem
 	.offers__item-characteristics li
@@ -1540,6 +1705,14 @@ a.logo
 		height: 28rem
 	.offers__item-btn
 		font-size: 10px
+	.product__details-list tr td:first-of-type
+		padding-right: 4.2rem
+	.product__advantages-list tr td
+		padding-right: 3.2rem
+	.header__breadcrumbs-list li
+		font-size: 0.6em
+	.header__breadcrumbs-list li:before
+		margin: 0 0.35rem 0 0.8375em
 	.offers__item-info
 		padding-left: 0.8rem
 		padding-right: 0.8rem
@@ -1550,6 +1723,8 @@ a.logo
 		width: 9.6rem
 	.banner
 		min-height: 24rem
+	.product__slide.slick-center .product__slide-img
+		width: 24rem
 	.offers__item-characteristics
 		flex-wrap: wrap
 		width: 100%
@@ -1561,6 +1736,23 @@ a.logo
 		padding-left: 21rem
 	.reviews__slide-inner
 		width: 75%
+
+@media screen and (max-width: 890px)
+	.product__details-list
+		font-size: .75em
+	.product__advantages-list tr td p
+		font-size: .7em
+	.product__advantages-list tr td p:before
+		width: 0.8rem
+		height: 0.8rem
+		margin-right: 0.4rem
+	.product__info-title
+		font-size: 0.88em
+		margin-bottom: 1rem
+	.product__details-list tr td:first-of-type
+		padding-right: 3.8rem
+	.product__advantages-list tr td p
+		margin-bottom: 0.65rem
 
 @media screen and (max-width: 850px)
 	.header__nav.header__nav--left
@@ -1632,6 +1824,33 @@ a.logo
 		width: 100%
 	.banner
 		min-height: 20rem
+	.product__details
+		width: 100%
+		padding-bottom: 1.5rem
+		border-bottom: 1px solid #eeeeee
+	.product__slide.slick-center .product__slide-img
+		width: 21rem
+	.arrow.arrow--prev-gallery
+		left: 15%
+	.arrow.arrow--next-gallery
+		right: 15%
+	.product__details-list
+		margin-right: 0
+	.product__advantages
+		width: 100%
+		padding-top: 1.5rem
+	.product__info > .container
+		flex-wrap: wrap
+	.product__form
+		width: 100%
+		margin-top: 2.5rem
+	.product__video
+		width: 65%
+		padding-bottom: 36.5625%
+		margin: auto
+	.product__cta > .container
+		flex-wrap: wrap
+
 
 @media screen and (max-width: 720px)
 	a.logo
@@ -1708,6 +1927,12 @@ a.logo
 		width: 80%
 	.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type
 		margin-right: 2rem
+	.product__slide.slick-center .product__slide-img
+		width: 17rem
+	.arrow.arrow--prev-gallery
+		left: 14%
+	.arrow.arrow--next-gallery
+		right: 14%
 
 @media screen and (max-width: 540px)
 	.header__modal-group
@@ -1738,6 +1963,12 @@ a.logo
 		text-align: center
 	.footer__socials
 		display: inline-block
+	.product__slide.slick-center .product__slide-img
+		width: 14rem
+	.arrow.arrow--prev-gallery
+		left: 11%
+	.arrow.arrow--next-gallery
+		right: 11%
 
 @media screen and (max-width: 480px)
 	.header__search
@@ -1804,13 +2035,40 @@ a.logo
 		margin-top: 1.5rem
 	.rent__item
 		width: 100%
-		
+	.caption-inner
+		font-size: 1em
 	.reviews__controls
 		margin-top: 1rem
 	.footer
 		margin-top: 3.8rem
 	.reviews
 		padding-top: 4.4rem
+	.product__form
+		position: relative
+		padding-bottom: 4.6rem
+	.product__video
+		width: 100%
+		padding-bottom: 56.25%
+	.product__form-content .form__group:first-child,
+	.product__form-content .form__group:last-child,
+	.product__form-content-bottom-left,
+	.product__form-content-bottom-right
+		width: 100%
+	.product__form-content .form__group:last-child
+		margin-top: 1rem
+
+	.product__form-content-top,
+	.product__form-content-bottom
+		flex-wrap: wrap
+	.product__form-submit
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+	.product__form-content-bottom-right
+		margin-top: 1rem
+	.product__form-content-bottom-right textarea
+		height: 100%
 	.advantages__img
 		display: none
 	.advantages__item:nth-child(1),
@@ -1852,7 +2110,16 @@ a.logo
 	.villas__filter
 		flex-wrap: wrap
 		justify-content: flex-start
+	.product__advantages-list tr td
+		padding-right: 2rem
+	.product__advantages-list tr td p
+		font-size: .6em
 
+@media screen and (max-width: 400px)
+	.arrow.arrow--prev-gallery
+		left: 3%
+	.arrow.arrow--next-gallery
+		right: 3%
 
 @media screen and (max-width: 390px)
 	.offers__content
@@ -1867,5 +2134,9 @@ a.logo
 	.header__btn
 		padding-left: 0.8rem
 		padding-right: 0.8rem
+	.arrow.arrow--prev-gallery
+		left: 1.5%
+	.arrow.arrow--next-gallery
+		right: 1.5%
 	.banner__content
 		width: 70%
