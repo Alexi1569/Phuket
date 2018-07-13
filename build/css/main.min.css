@@ -126,6 +126,10 @@ textarea {
   color: #303030;
 }
 
+#map {
+  height: 100%;
+}
+
 .slick-slide:focus {
   outline: 0;
 }
@@ -888,6 +892,9 @@ a.logo {
   padding: 0.625rem 0.75rem;
   min-width: 7.75rem;
   border-top: 1px solid #3b7893;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
 }
 
 .header__nav-inner:before {
@@ -1281,6 +1288,41 @@ a.logo {
 
 .form-section__form .form__group {
   width: 15.1754386%;
+}
+
+.news__content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.news__content-item {
+  width: 22.8070175%;
+  margin-right: 2.92397667%;
+  margin-bottom: 2.5rem;
+  max-width: 260px;
+}
+
+.news__content-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .offers__content {
@@ -3249,6 +3291,16 @@ a.logo {
   .header__hamburger {
     display: block;
   }
+  .news__content-item {
+    width: 31.5%;
+    margin-right: 2.75%;
+  }
+  .news__content-item:nth-child(4n) {
+    margin-right: 2.75%;
+  }
+  .news__content-item:nth-child(3n) {
+    margin-right: 0;
+  }
   .header__bottom {
     padding: 1rem 0;
     -webkit-box-pack: start;
@@ -3360,6 +3412,19 @@ a.logo {
   }
   .arrow.arrow--next-gallery {
     right: 11%;
+  }
+  .news__content-item {
+    width: 46%;
+    margin-right: 4%;
+  }
+  .news__content-item:nth-child(4n) {
+    margin-right: 4%;
+  }
+  .news__content-item:nth-child(3n) {
+    margin-right: 4%;
+  }
+  .news__content-item:nth-child(2n) {
+    margin-right: 0;
   }
 }
 
@@ -3598,6 +3663,21 @@ a.logo {
   }
   .banner__content {
     width: 70%;
+  }
+  .news__content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .news__content-item {
+    margin-right: 0;
+    width: 100%;
+  }
+  .news__content-item:nth-child(4n) {
+    margin-right: 0;
+  }
+  .news__content-item:nth-child(3n) {
+    margin-right: 0;
   }
 }
 
