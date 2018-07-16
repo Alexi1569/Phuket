@@ -119,6 +119,11 @@ button {
   cursor: pointer;
 }
 
+textarea {
+  resize: none;
+  overflow-y: hidden;
+}
+
 input,
 textarea {
   font-family: "Circe reg";
@@ -457,6 +462,39 @@ input[type="submit"] {
   margin-top: 3.12500rem;
 }
 
+.complex-page .complexes__item-address {
+  margin: 0.625rem 0 1.75rem;
+}
+
+.complex-page .complexes__item-address {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.complex-page .complexes__item-address-text {
+  margin-right: 1.1875rem;
+}
+
+.complex-page .caption-inner {
+  margin-bottom: 0;
+}
+
 .btn {
   display: block;
   font-size: 11px;
@@ -475,6 +513,12 @@ input[type="submit"] {
   -o-transition: 0.3s all ease;
   -moz-transition: 0.3s all ease;
   transition: 0.3s all ease;
+}
+
+.btn:not(.btn--filled):hover {
+  background-color: #3b7893;
+  color: #fff;
+  border-color: #3b7893;
 }
 
 .btn.btn--filled {
@@ -733,12 +777,6 @@ a.logo {
   font-size: 10px;
   padding-left: 1.29rem;
   padding-right: 1.29rem;
-}
-
-.header__btn:hover {
-  background-color: #3b7893;
-  color: #fff;
-  border-color: #3b7893;
 }
 
 .header__modal {
@@ -1325,6 +1363,103 @@ a.logo {
   margin-right: 0;
 }
 
+.complexes__inner-content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -1.87500rem;
+}
+
+.complexes__item {
+  width: 31.5789474%;
+  max-width: 360px;
+  margin-right: 2.63157895%;
+  margin-bottom: 3.25rem;
+}
+
+.complexes__item-img {
+  max-width: 100%;
+  display: block;
+}
+
+.complexes__item-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.complexes__item-title {
+  margin-top: 1.37500rem;
+  color: #333333;
+  font-size: 0.875em;
+  font-family: "Circe bold";
+  display: block;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+}
+
+.complexes__item-title:hover {
+  color: #3b7893;
+}
+
+.complexes__item-excerpt {
+  margin-top: 1.87500rem;
+  font-size: 0.875em;
+  color: #333;
+  line-height: 1.38461538;
+  letter-spacing: 0.0001em;
+}
+
+.complexes__item-address {
+  font-size: 0.8125em;
+  font-family: "Circe light";
+  text-shadow: 0 0 0 #000;
+  margin-top: 1rem;
+}
+
+.complexes__item-address-text {
+  color: #4a4949;
+}
+
+.complexes__item-address-link {
+  color: #000;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  display: block;
+}
+
+.complexes__item-address-link:hover {
+  color: #3b7893;
+}
+
+.complexes__item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .offers__content {
   display: -webkit-flex;
   display: -moz-flex;
@@ -1687,6 +1822,108 @@ a.logo {
   width: 100%;
 }
 
+.contacts-inner {
+  color: #303030;
+}
+
+.contacts-inner a {
+  color: #303030;
+}
+
+.contacts-inner__form-submit {
+  padding-left: 2.8125rem;
+  padding-right: 2.8125rem;
+}
+
+.contacts-inner__form .form__group {
+  margin-bottom: 0.9375rem;
+  display: block;
+}
+
+.contacts-inner__form .form__group input {
+  width: 100%;
+}
+
+.contacts-inner__form .form__group textarea {
+  height: 85px;
+}
+
+.contacts-inner__link {
+  font-size: 0.875em;
+  line-height: 1.42857143;
+  display: block;
+}
+
+.contacts-inner__title {
+  font-family: "Circe bold";
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.contacts-inner__info {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 38.5964912%;
+  padding-right: 7.45614035%;
+}
+
+.contacts-inner__content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contacts-inner__map {
+  width: 57.2807018%;
+  height: 33.5rem;
+}
+
+.contacts-inner__map iframe {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  display: block;
+}
+
 .complexes .slick-list {
   margin: 0 -0.84375rem;
 }
@@ -1831,6 +2068,345 @@ a.logo {
   background-size: cover;
 }
 
+.product__reviews {
+  margin-top: 4.0625rem;
+}
+
+.product__reviews-content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product__reviews-add {
+  width: 28.09473684%;
+}
+
+.product__reviews-add-submit {
+  margin-top: 1.87500rem;
+  padding-left: 2.62500rem;
+  padding-right: 2.62500rem;
+}
+
+.product__reviews-add .form__group {
+  margin-top: 0.65rem;
+  display: block;
+}
+
+.product__reviews-add textarea {
+  height: 9.0625rem;
+}
+
+.product__reviews-add-rating {
+  display: block;
+  margin-bottom: 0.625rem;
+}
+
+.product__reviews-add-title {
+  font-size: 0.75em;
+  font-family: "Circe bold";
+  text-transform: uppercase;
+  color: #303030;
+}
+
+.product__reviews-items {
+  width: 63.5964912%;
+}
+
+.product__reviews-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 2.1875rem;
+  color: #303030;
+}
+
+.product__reviews-item-name {
+  text-transform: uppercase;
+  font-family: "Circe bold";
+  font-size: 0.625em;
+  letter-spacing: 0.0025em;
+}
+
+.product__reviews-item-excerpt {
+  font-family: "Circe light";
+  font-size: 0.75em;
+  line-height: 1.66666667;
+  text-shadow: 0 0 0 #303030;
+  margin-top: 0.75rem;
+}
+
+.product__reviews-item:last-child {
+  margin-bottom: 0;
+}
+
+.product__reviews-item-content {
+  margin-left: 1.25rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.product__reviews-item-photo {
+  width: 4.0625rem;
+}
+
+.product__reviews-item-photo img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+
+.product__reservation {
+  margin-top: 4.0625rem;
+}
+
+.product__reservation-person {
+  font-size: 0.75em;
+}
+
+.product__reservation-person-name {
+  font-family: "Circe bold";
+  text-transform: uppercase;
+  color: #303030;
+}
+
+.product__reservation-person-descr {
+  font-family: "Circe light";
+  color: #a2a2a2;
+  text-shadow: 0 0 0 #a2a2a2;
+}
+
+.product__reservation-person-contacts {
+  margin-top: 0.75rem;
+  font-family: "Circe light";
+  font-size: 1.08333333em;
+}
+
+.product__reservation-person-contacts a {
+  display: block;
+  color: #575757;
+  -webkit-transition: 0.3s color ease;
+  -o-transition: 0.3s color ease;
+  -moz-transition: 0.3s color ease;
+  transition: 0.3s color ease;
+  text-shadow: 0 0 0 #575757;
+  margin-bottom: 3px;
+}
+
+.product__reservation-person-contacts a:last-of-type {
+  margin-bottom: 0;
+}
+
+.product__reservation-person-contacts a:hover {
+  color: #3b7893;
+}
+
+.product__reservation-person-contacts a:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: center;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 0.625rem;
+}
+
+.product__reservation-person-contacts a.product__reservation-person-link--phone:before {
+  background-image: url(../img/phone-icon-accent.svg);
+}
+
+.product__reservation-person-contacts a.product__reservation-person-link--email:before {
+  background-image: url(../img/email-icon-accent.svg);
+}
+
+.product__reservation-person-img {
+  max-width: 100%;
+}
+
+.product__reservation-person-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.product__reservation-person-info {
+  margin-top: 1.25rem;
+}
+
+.product__reservation .form__group {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.product__reservation .form__group.form__group--name, .product__reservation .form__group.form__group--surname {
+  width: 24.8351648%;
+}
+
+.product__reservation .form__group.form__group--date {
+  width: 19.7802198%;
+}
+
+.product__reservation .form__group.form__group--time, .product__reservation .form__group.form__group--quantity {
+  width: 10.989011%;
+}
+
+.product__reservation-top {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product__reservation-content {
+  display: block;
+}
+
+.product__reservation-cta {
+  width: 79.8245614%;
+}
+
+.product__reservation-person {
+  width: 17.1052632%;
+}
+
+.product__reservation-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product__reservation-bottom-left {
+  width: 24.8351648%;
+  display: block;
+}
+
+.product__reservation-bottom-right {
+  width: 73%;
+}
+
+.product__reservation-bottom-right .form__group {
+  height: 100%;
+  margin-bottom: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product__reservation-bottom-right .form__group textarea {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.product__reservation > .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .product__cta {
   margin-top: 4.37500rem;
 }
@@ -1901,7 +2477,6 @@ a.logo {
 
 .product__form-content-bottom-right textarea {
   height: 86%;
-  resize: none;
   max-height: 100%;
   max-width: 100%;
   overflow-y: hidden;
@@ -2001,7 +2576,7 @@ a.logo {
   color: #3b7893;
   font-family: "Circe bold";
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.87500rem;
   font-size: 1em;
   display: block;
 }
@@ -2224,7 +2799,7 @@ a.logo {
 }
 
 .product__descr {
-  margin-bottom: 2.62500rem;
+  margin-top: 2.62500rem;
 }
 
 .product__descr p {
@@ -2241,7 +2816,7 @@ a.logo {
 .product__gallery {
   max-width: 1170px;
   width: auto;
-  margin: 0 auto;
+  margin: 3rem auto 0;
   position: relative;
 }
 
@@ -2868,38 +3443,34 @@ a.logo {
 }
 
 .villas__filter {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-  -moz-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-bottom: 1.87500rem;
+  margin-bottom: 3.75rem;
+}
+
+.villas__filter-btn {
+  width: 15.1754386%;
+  margin-bottom: 3px;
+}
+
+.villas__filter .SumoSelect > .CaptionCont > label > i {
+  top: 2px;
+}
+
+.villas__filter .form__group .SumoSelect > .CaptionCont > label i {
+  width: 7px;
+  height: 11px;
 }
 
 .villas__filter .form__group .SumoSelect > .CaptionCont, .villas__filter .form__group .SumoSelect.open > .CaptionCont, .villas__filter .form__group .SumoSelect:focus > .CaptionCont, .villas__filter .form__group .SumoSelect:hover > .CaptionCont {
-  height: 25px;
-  line-height: 25px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span {
-  line-height: 16px;
-  font-size: 11px;
+  line-height: 19px;
+  font-size: 13px;
 }
 
-.villas__filter-form {
+.villas__filter-form .form__group-content {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -2908,11 +3479,11 @@ a.logo {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -moz-box-pack: end;
@@ -2921,15 +3492,9 @@ a.logo {
 }
 
 .villas__filter-form .form__group {
-  margin-right: 0.625rem;
+  margin-right: 1.78947368%;
   display: block;
-  width: 8.75rem;
-  height: 1.5625rem;
-  line-height: 1.5625rem;
-}
-
-.villas__filter-form .form__group:last-of-type {
-  margin-right: 0;
+  width: 15.1754386%;
 }
 
 .villas__filter-text {
@@ -2988,6 +3553,12 @@ a.logo {
   .offers__item-info {
     display: block;
   }
+  .complexes__inner-content {
+    font-size: 14px;
+  }
+  .complexes__item-excerpt {
+    margin-top: 1.6rem;
+  }
   .offers__item {
     max-height: none;
     min-height: auto;
@@ -3000,6 +3571,36 @@ a.logo {
 @media screen and (max-width: 991px) {
   .header__video {
     height: 28rem;
+  }
+  .product__reviews-item-photo {
+    width: 3.4rem;
+  }
+  .product__reviews-item-content {
+    margin-left: 1rem;
+  }
+  .contacts-inner__info {
+    padding-right: 4%;
+  }
+  .product__reservation-cta .form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span {
+    font-size: 11px;
+  }
+  .product__reservation-cta .SumoSelect > .CaptionCont > span {
+    padding-right: 24px;
+  }
+  .product__reservation-cta {
+    width: 77%;
+  }
+  .product__reservation-person {
+    width: 21.5%;
+  }
+  .product__reservation {
+    font-size: 14px;
+  }
+  .product__reservation-person-contacts a:before {
+    margin-right: 0.35rem;
+  }
+  .contacts-inner__content {
+    font-size: 15px;
   }
   .offers__item-btn {
     font-size: 10px;
@@ -3087,8 +3688,15 @@ a.logo {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .villas__filter-form .form__group-label {
+    font-size: 10px;
+  }
   .header__phone {
     margin-right: 1.5rem;
+  }
+  .villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span {
+    font-size: 11px;
+    line-height: 20px;
   }
   .offers__content {
     width: 85%;
@@ -3169,6 +3777,82 @@ a.logo {
 @media screen and (max-width: 767px) {
   .header__nav.header__nav--left {
     padding-right: 4rem;
+  }
+  .villas__filter-form .form__group-content {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product__reviews-add-submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product__reviews-content {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product__reviews-items,
+  .product__reviews-add {
+    width: 100%;
+  }
+  .product__reviews-add {
+    margin-top: 1.8rem;
+  }
+  .contacts-inner__info {
+    padding-right: 0%;
+  }
+  .contacts-inner__content {
+    font-size: 14px;
+  }
+  .contacts-inner__map {
+    height: 30rem;
+  }
+  .product__reservation > .container {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product__reservation-cta,
+  .product__reservation-person {
+    width: 100%;
+  }
+  .product__reservation-person {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    text-align: center;
+  }
+  .product__reservation-cta {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-top: 1.5rem;
+  }
+  .villas__filter-form .form__group {
+    width: 31.5%;
+    margin-right: 2.75%;
+  }
+  .villas__filter-form .form__group:nth-child(3n) {
+    margin-right: 0;
+  }
+  .villas__filter-btn {
+    width: 31.5%;
+    margin-top: 2.7rem;
+  }
+  .complexes__item {
+    width: 48%;
+    margin-right: 4%;
+  }
+  .complexes__item:nth-child(3n) {
+    margin-right: 4%;
+  }
+  .complexes__item:nth-child(2n) {
+    margin-right: 0;
   }
   .header__nav.header__nav--right {
     padding-left: 4rem;
@@ -3362,6 +4046,59 @@ a.logo {
   .arrow.arrow--next-gallery {
     right: 14%;
   }
+  .product__reservation-top {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product__reservation .form__group.form__group--name, .product__reservation .form__group.form__group--surname, .product__reservation .form__group.form__group--date, .product__reservation-bottom-left .form__group {
+    width: 48%;
+  }
+  .product__reservation .form__group.form__group--time, .product__reservation .form__group.form__group--quantity {
+    width: 21.8%;
+  }
+  .product__reservation-bottom {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product__reservation-bottom-left,
+  .product__reservation-bottom-right {
+    width: 100%;
+  }
+  .product__reservation-bottom-left {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .product__form-submit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .product__reservation-bottom {
+    position: relative;
+    padding-bottom: 3rem;
+  }
+  .product__reservation-bottom-right .form__group textarea {
+    height: 8rem;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -3388,6 +4125,29 @@ a.logo {
   }
   .reviews__controls {
     margin-top: 1.3rem;
+  }
+  .contacts-inner__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .contacts-inner__map {
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .contacts-inner__info {
+    width: 100%;
+  }
+  .contacts-inner__block {
+    margin-bottom: 1.2rem;
+  }
+  .contacts-inner__block:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -3440,6 +4200,24 @@ a.logo {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  .product__reviews-item-photo {
+    margin: auto;
+  }
+  .product__reviews-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  .product__reviews-item-content {
+    width: 100%;
+    margin-top: 1.2em;
+    margin-left: 0;
   }
   .form-section__form .form__group-content {
     -webkit-flex-wrap: wrap;
@@ -3596,6 +4374,39 @@ a.logo {
   .help-form__form .form__group {
     width: 100%;
     margin: 0 0 0.8rem;
+  }
+  .complexes__inner-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .villas__filter-form .form__group {
+    width: 47.5%;
+    margin-right: 5%;
+    margin-bottom: 1.3rem;
+  }
+  .villas__filter-form .form__group:nth-child(3n) {
+    margin-right: 5%;
+  }
+  .villas__filter-form .form__group:nth-child(2n) {
+    margin-right: 0;
+  }
+  .villas__filter-btn {
+    width: 47.5%;
+    margin-top: 0;
+    margin-bottom: 1.45rem;
+  }
+  .villas__filter {
+    margin-bottom: 2.1rem;
+  }
+  .complexes__item {
+    width: 100%;
+    margin-right: 0%;
+  }
+  .complexes__item:last-child {
+    margin-bottom: 0;
+  }
+  .complexes__item:nth-child(3n) {
+    margin-right: 0%;
   }
   .help-form__btn {
     margin-top: 1.2rem;

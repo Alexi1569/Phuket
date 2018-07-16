@@ -430,27 +430,44 @@
       </div>
     </div>
 
-    <div class="product__cta">
+    <div class="product__reservation">
       <div class="container">
-        <div class="product__video">
-          <iframe src="https://www.youtube.com/embed/XgSjoHgy3Rk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="product__form">
-          <form action="" class="product__form-form">
-            <label class="product__info-title">Buy</label>
-            <label class="product__form-content">
-              <label class="product__form-content-top">
-                <label class="form__group">
+        <div class="product__reservation-cta">
+          <form action="#" class="product__reservation-form">
+            <label class="product__info-title">Reservation</label>
+            <label class="product__reservation-content">
+              <label class="product__reservation-top">
+                <label class="form__group form__group--name">
                   <label class="form__group-label" for="username">Name</label>
                   <input type="text" name="username" id="" required="" placeholder="Adam">
                 </label>
-                <label class="form__group">
+                <label class="form__group form__group--surname">
                   <label class="form__group-label" for="username">Surname</label>
                   <input type="text" name="username" id="" required="" placeholder="Scooter">
                 </label>
+                <label class="form__group form__group--date">
+                  <label class="form__group-label">Date</label>
+                  <input type="text" name="user-date" id="js-select-date" />
+                </label>
+                <label class="form__group form__group--time">
+                  <label class="form__group-label">Time</label>
+                  <select class="styled-select" id="js-select-time">
+                    <option value="1">10:45</option>
+                    <option value="2">11:45</option>
+                    <option value="4">12:45</option>
+                  </select>
+                </label>
+                <label class="form__group form__group--quantity">
+                  <label class="form__group-label">quantity</label>
+                  <select class="styled-select" id="js-select-quantity">
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="4">5</option>
+                  </select>
+                </label>
               </label>
-              <label class="product__form-content-bottom">
-                <label class="product__form-content-bottom-left">
+              <label class="product__reservation-bottom">
+                <label class="product__reservation-bottom-left">
                   <label class="form__group">
                     <label class="form__group-label" for="username">e-mail</label>
                     <input type="email" name="username" id="" required="" placeholder="adamscooter@email.com">
@@ -459,18 +476,95 @@
                     <label class="form__group-label" for="username">Phone</label>
                     <input type="tel" name="username" id="" required="" placeholder="+48 (555) 439502">
                   </label>
-                  <input type="submit" class="product__form-submit btn btn--filled" value="Send application" />
+                  <input type="submit" class="product__form-submit btn btn--filled" value="Reservation" />
                 </label>
-                <label class="product__form-content-bottom-right">
+                <label class="product__reservation-bottom-right">
                   <label class="form__group">
                     <label class="form__group-label" for="username">Message</label>
                     <textarea name="username" id="" required="" placeholder="Hello..." ></textarea>
                   </label>
                 </label>
               </label>
+              
             </label>
-            
           </form>
+        </div>
+        <div class="product__reservation-person">
+          <img src="img/product-page-rent-img.jpg" alt="Img" class="product__reservation-person-img" />
+          <div class="product__reservation-person-info">
+            <p class="product__reservation-person-name">adam scooter</p>
+            <p class="product__reservation-person-descr">Contact agent</p>
+          </div>
+          <div class="product__reservation-person-contacts">
+            <a href="mailto:adamscooter@email.com" class="product__reservation-person-link product__reservation-person-link--email">adamscooter@email.com</a>
+            <a href="tel:(555) 439502" class="product__reservation-person-link product__reservation-person-link--phone">(555) 439502</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product__reviews">
+      <div class="container">
+        <h3 class="product__info-title">Reviews</h3>
+        <div class="product__reviews-content">
+          <div class="product__reviews-items">
+            <div class="product__reviews-item">
+              <div class="product__reviews-item-photo">
+                <img src="img/reviews/review-1.jpg" alt="Review" />
+              </div>
+              <div class="product__reviews-item-content">
+                <p class="product__reviews-item-name">lorem</p>
+                <div class="product__reviews-item-rating"></div>
+                <p class="product__reviews-item-excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+                </p>
+              </div>
+            </div>
+            <div class="product__reviews-item">
+              <div class="product__reviews-item-photo">
+                <img src="img/reviews/review-1.jpg" alt="Review" />
+              </div>
+              <div class="product__reviews-item-content">
+                <p class="product__reviews-item-name">lorem</p>
+                <div class="product__reviews-item-rating"></div>
+                <p class="product__reviews-item-excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+                </p>
+              </div>
+            </div>
+            <div class="product__reviews-item">
+              <div class="product__reviews-item-photo">
+                <img src="img/reviews/review-1.jpg" alt="Review" />
+              </div>
+              <div class="product__reviews-item-content">
+                <p class="product__reviews-item-name">lorem</p>
+                <div class="product__reviews-item-rating"></div>
+                <p class="product__reviews-item-excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="product__reviews-add">
+            <form action="" class="product__reviews-add-form">
+              <label class="product__reviews-add-title">Do you want leave review?</label>
+              <label class="product__reviews-add-rating">
+                
+              </label>
+              <label class="form__group">
+                <label class="form__group-label" for="username">your review</label>
+                <textarea name="username" id="" required="" placeholder="Hello..." ></textarea>
+              </label>
+              <label class="form__group">
+                <label class="form__group-label" for="username">Your Name</label>
+                <input type="text" name="username" id="" required="" placeholder="Adam">
+              </label>
+              <label class="form__group">
+                <label class="form__group-label" for="username">your e-mail</label>
+                <input type="email" name="username" id="" required="" placeholder="adamscooter@email.com">
+              </label>
+              <input type="submit" class="product__reviews-add-submit btn btn--filled" value="Send" />
+            </form>
+          </div>
         </div>
       </div>
     </div>

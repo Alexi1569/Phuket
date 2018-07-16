@@ -101,6 +101,26 @@ jQuery(document).ready(function($) {
 		$('#js-select-beach').SumoSelect({});
 	}
 
+	if ($('#js-select-quantity').length) {
+		$('#js-select-quantity').SumoSelect({});
+	}
+
+	if ($('#js-select-location').length) {
+		$('#js-select-location').SumoSelect({});
+	}
+
+	if ($('#js-select-area').length) {
+		$('#js-select-area').SumoSelect({});
+	}
+
+	if ($('#js-select-distance').length) {
+		$('#js-select-distance').SumoSelect({});
+	}
+
+	if ($('#js-select-price-range').length) {
+		$('#js-select-price-range').SumoSelect({});
+	}
+
 	if ($('#js-select-sort-quantity').length) {
 		$('#js-select-sort-quantity').SumoSelect({});
 	}
@@ -110,7 +130,6 @@ jQuery(document).ready(function($) {
 	}
 
 	if ($('#js-select-date').length) {
-		console.log(moment())
 		$('#js-select-date').daterangepicker({
 			opens: 'center',
 			startDate: moment(),

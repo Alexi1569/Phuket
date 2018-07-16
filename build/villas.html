@@ -276,21 +276,49 @@
     <div class="container">
       <h2 class="caption-inner">Villas</h2>
       <div class="villas__filter">
-        <p class="villas__filter-text">sort by</p>
         <form class="villas__filter-form">
-          <label class="form__group">
-            <select class="styled-select" id="js-select-sort-quantity">
-              <option value="1">Room quantity</option>
-              <option value="2">Room quantity1</option>
-              <option value="4">Room quantity2</option>
-            </select>
-          </label>
-          <label class="form__group">
-            <select class="styled-select" id="js-select-sort-price">
-              <option value="1">Price</option>
-              <option value="2">Price1</option>
-              <option value="4">Price2</option>
-            </select>
+          <label class="form__group-content">
+            <label class="form__group">
+              <label class="form__group-label">location</label>
+              <select class="styled-select" id="js-select-location">
+                <option value="1">All locations</option>
+                <option value="2">1</option>
+                <option value="4">2</option>
+              </select>
+            </label>
+            <label class="form__group">
+              <label class="form__group-label">Rooms</label>
+              <select class="styled-select" id="js-select-room">
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+            <label class="form__group">
+              <label class="form__group-label">Area</label>
+              <select class="styled-select" id="js-select-area">
+                <option value="1">> 50m&sup2;</option>
+                <option value="2">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+            <label class="form__group">
+              <label class="form__group-label">Distance to the sea</label>
+              <select class="styled-select" id="js-select-distance">
+                <option value="1">> 500 m</option>
+                <option value="2">> 502 m</option>
+                <option value="4">> 504 m</option>
+              </select>
+            </label>
+            <label class="form__group">
+              <label class="form__group-label">Price</label>
+              <select class="styled-select" id="js-select-price-range">
+                <option value="1">> $500 </option>
+                <option value="2">> $1500 </option>
+                <option value="4">> $2500 </option>
+              </select>
+            </label>
+            <input type="submit" class="btn btn--filled btn--inline--block villas__filter-btn" value="Search" />
           </label>
         </form>
       </div>

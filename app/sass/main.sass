@@ -44,6 +44,10 @@ html, body
 button
 	cursor: pointer
 
+textarea
+	resize: none
+	overflow-y: hidden
+
 input,
 textarea
 	font-family: $reg
@@ -270,6 +274,22 @@ input[type="submit"]
 .section--margin-top
 	margin-top: 3.12500rem
 
+.complex-page
+	.complexes__item-address
+		margin: 0.625rem 0 1.75rem
+	.complexes__item-address
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: baseline
+		justify-content: flex-start
+	.complexes__item-address-text
+		margin-right: 1.1875rem
+	.caption-inner
+		margin-bottom: 0
+
 .btn
 	display: block
 	font-size: 11px
@@ -283,6 +303,10 @@ input[type="submit"]
 	border: 1px solid $text
 	height: 1.87500rem
 	transition: 0.3s all ease
+	&:not(.btn--filled):hover
+		background-color: $accent
+		color: #fff
+		border-color: $accent
 	&.btn--filled
 		background-color: $accent
 		color: #fff
@@ -439,10 +463,6 @@ a.logo
 		font-size: 10px
 		padding-left: 1.29rem
 		padding-right: 1.29rem
-		&:hover
-			background-color: $accent
-			color: #fff
-			border-color: $accent
 	&__modal
 		letter-spacing: 0.025em
 		&-submit
@@ -777,6 +797,62 @@ a.logo
 			&:nth-child(4n)
 				margin-right: 0
 
+.complexes
+	&__inner-content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		justify-content: flex-start
+		flex-wrap: wrap
+		margin-bottom: -1.87500rem
+	&__item
+		width: 31.5789474%
+		max-width: 360px
+		margin-right: 2.63157895%
+		margin-bottom: 3.25rem
+		&-img
+			max-width: 100%
+			display: block
+			img
+				display: block
+				max-width: 100%
+				height: auto
+				margin: auto
+		&-title
+			margin-top: 1.37500rem
+			color: #333333
+			font-size: 0.875em
+			font-family: $bold
+			display: block
+			transition: 0.3s all ease
+			text-transform: uppercase
+			&:hover
+				color: $accent
+		&-excerpt
+			margin-top: 1.87500rem
+			font-size: 0.875em
+			color: #333
+			line-height: 1.38461538
+			letter-spacing: 0.0001em
+		&-address
+			font-size: 0.8125em
+			font-family: $light
+			text-shadow: 0 0 0 #000
+			margin-top: 1rem
+			&-text
+				color: #4a4949
+			&-link
+				color: #000
+				transition: 0.3s all ease
+				display: block
+				&:hover
+					color: $accent
+		&:nth-child(3n)
+			margin-right: 0
+
 .offers
 	&__content
 		display: -webkit-flex
@@ -961,6 +1037,58 @@ a.logo
 			input:not([type="submit"])
 				width: 100%
 
+.contacts-inner
+	color: #303030
+	a
+		color: #303030
+	&__form
+		&-submit
+			padding-left: 2.8125rem
+			padding-right: 2.8125rem
+		.form__group
+			margin-bottom: 0.9375rem
+			display: block
+			input
+				width: 100%
+			textarea
+				height: 85px
+	&__link
+		font-size: 0.875em
+		line-height: 1.42857143
+		display: block
+	&__title
+		font-family: $bold
+		text-transform: uppercase
+		display: block
+		margin-bottom: 0.75rem
+	&__info
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: stretch
+		width: 38.5964912%
+		padding-right: 7.45614035%
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+	&__map
+		width: 57.2807018%
+		height: 33.5rem
+		iframe
+			height: 100%
+			width: 100%
+			border: 0
+			display: block
+
 .complexes
 	.slick-list
 		margin: 0 -0.84375rem
@@ -1052,6 +1180,177 @@ a.logo
 
 
 .product
+	&__reviews
+		margin-top: 4.0625rem
+		&-content
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+		&-add
+			width: 28.09473684%
+			&-submit
+				margin-top: 1.87500rem
+				padding-left: 2.62500rem
+				padding-right: 2.62500rem
+			.form__group
+				margin-top: 0.65rem
+				display: block
+			textarea
+				height: 9.0625rem
+			&-rating
+				display: block
+				margin-bottom: 0.625rem
+			&-title
+				font-size: 0.75em
+				font-family: $bold
+				text-transform: uppercase
+				color: #303030
+		&-items
+			width: 63.5964912%
+		&-item
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: flex-start
+			justify-content: flex-start
+			margin-bottom: 2.1875rem
+			color: #303030
+			&-name
+				text-transform: uppercase
+				font-family: $bold
+				font-size: 0.625em
+				letter-spacing: 0.0025em
+			&-excerpt
+				font-family: $light
+				font-size: 0.75em
+				line-height: 1.66666667
+				text-shadow: 0 0 0 #303030
+				margin-top: 0.75rem
+			&:last-child
+				margin-bottom: 0
+			&-content
+				margin-left: 1.25rem
+				flex: 1
+			&-photo
+				width: 4.0625rem
+				img
+					max-width: 100%
+					display: block
+					height: auto
+					margin: auto
+	&__reservation
+		margin-top: 4.0625rem
+		&-person
+			font-size: 0.75em
+			&-name
+				font-family: $bold
+				text-transform: uppercase
+				color: #303030
+			&-descr
+				font-family: $light
+				color: #a2a2a2
+				text-shadow: 0 0 0 #a2a2a2
+			&-contacts
+				margin-top: 0.75rem
+				font-family: $light
+				font-size: 1.08333333em
+				a
+					display: block
+					color: #575757
+					transition: 0.3s color ease
+					text-shadow: 0 0 0 #575757
+					margin-bottom: 3px
+					&:last-of-type
+						margin-bottom: 0
+					&:hover
+						color: $accent
+					&:before
+						content: ''
+						display: inline-block
+						vertical-align: middle
+						width: 0.75rem
+						height: 0.75rem
+						background-position: center
+						background-size: cover
+						background-repeat: no-repeat
+						margin-right: 0.625rem
+					&.product__reservation-person-link--phone
+						&:before
+							background-image: url(../img/phone-icon-accent.svg)
+					&.product__reservation-person-link--email
+						&:before
+							background-image: url(../img/email-icon-accent.svg)
+			&-img
+				max-width: 100%
+				img
+					display: block
+					max-width: 100%
+					height: auto
+					margin: auto
+			&-info
+				margin-top: 1.25rem
+		.form__group
+			margin-bottom: 1rem
+			display: block
+			&.form__group--name,
+			&.form__group--surname
+				width: 24.8351648%
+			&.form__group--date
+				width: 19.7802198%
+			&.form__group--time,
+			&.form__group--quantity
+				width: 10.989011%
+		&-top
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: stretch
+			justify-content: space-between
+
+		&-content
+			display: block
+		&-cta
+			width: 79.8245614%
+		&-person
+			width: 17.1052632%
+		&-bottom
+			display: flex
+			align-items: stretch
+			justify-content: space-between
+			&-left
+				width: 24.8351648%
+				display: block
+			&-right
+				width: 73%
+				.form__group
+					height: 100%
+					margin-bottom: 0
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					flex-direction: column
+					align-items: stretch
+					justify-content: space-between
+					textarea
+						flex: 1
+		& > .container
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: flex-end
+			justify-content: space-between
 	&__cta
 		margin-top: 4.37500rem
 		& > .container
@@ -1087,7 +1386,6 @@ a.logo
 					width: 54.5%
 					textarea
 						height: 86%
-						resize: none
 						max-height: 100%
 						max-width: 100%
 						overflow-y: hidden
@@ -1142,7 +1440,7 @@ a.logo
 			color: $accent
 			font-family: $bold
 			text-transform: uppercase
-			margin-bottom: 1.25rem
+			margin-bottom: 1.87500rem
 			font-size: 1em
 			display: block
 	&__details
@@ -1265,7 +1563,7 @@ a.logo
 		.caption-inner
 			margin-right: 3rem
 	&__descr
-		margin-bottom: 2.62500rem
+		margin-top: 2.62500rem
 		p
 			font-size: 0.8125em
 			line-height: 1.69230769
@@ -1276,7 +1574,7 @@ a.logo
 	&__gallery
 		max-width: 1170px
 		width: auto
-		margin: 0 auto
+		margin: 3rem auto 0
 		position: relative
 		.slick-slide
 			position: relative
@@ -1643,36 +1941,34 @@ a.logo
 					svg
 						width: 13px
 	&__filter
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		align-items: baseline
-		justify-content: flex-end
-		margin-bottom: 1.87500rem
+		margin-bottom: 3.75rem
+		&-btn
+			width: 15.1754386%
+			margin-bottom: 3px
+		.SumoSelect>.CaptionCont>label>i
+			top: 2px
+		.form__group .SumoSelect > .CaptionCont > label i
+			width: 7px
+			height: 11px
 		.form__group .SumoSelect > .CaptionCont, .form__group .SumoSelect.open > .CaptionCont, .form__group .SumoSelect:focus > .CaptionCont, .form__group .SumoSelect:hover > .CaptionCont
-			height: 25px
-			line-height: 25px
+			height: 30px
+			line-height: 30px
 		.form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span
-			line-height: 16px
-			font-size: 11px
+			line-height: 19px
+			font-size: 13px
 		&-form
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			align-items: stretch
-			justify-content: flex-end
+			.form__group-content
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: flex-end
+				justify-content: flex-end
 			.form__group
-				&:last-of-type
-					margin-right: 0
-				margin-right: 0.625rem
+				margin-right: 1.78947368%
 				display: block
-				width: 8.75rem
-				height: 1.5625rem
-				line-height: 1.5625rem
+				width: 15.1754386%
 		&-text
 			text-transform: uppercase
 			color: #737373
@@ -1716,6 +2012,10 @@ a.logo
 		transform: scale(1)
 	.offers__item-info
 		display: block
+	.complexes__inner-content
+		font-size: 14px
+	.complexes__item-excerpt
+		margin-top: 1.6rem
 	.offers__item
 		max-height: none
 		min-height: auto
@@ -1725,6 +2025,27 @@ a.logo
 @media screen and (max-width: 991px)
 	.header__video
 		height: 28rem
+	.product__reviews-item-photo
+		width: 3.4rem
+	.product__reviews-item-content
+		margin-left: 1rem
+
+	.contacts-inner__info
+		padding-right: 4%
+	.product__reservation-cta .form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span
+		font-size: 11px
+	.product__reservation-cta .SumoSelect>.CaptionCont>span
+		padding-right: 24px
+	.product__reservation-cta
+		width: 77%
+	.product__reservation-person
+		width: 21.5%
+	.product__reservation
+		font-size: 14px
+	.product__reservation-person-contacts a:before
+		margin-right: 0.35rem
+	.contacts-inner__content
+		font-size: 15px
 	.offers__item-btn
 		font-size: 10px
 	.product__details-list tr td:first-of-type
@@ -1784,8 +2105,13 @@ a.logo
 	.header__btn
 		padding-left: 1rem
 		padding-right: 1rem
+	.villas__filter-form .form__group-label
+		font-size: 10px
 	.header__phone
 		margin-right: 1.5rem
+	.villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span
+		font-size: 11px
+		line-height: 20px
 	.offers__content
 		width: 85%
 		margin: auto
@@ -1836,6 +2162,50 @@ a.logo
 @media screen and (max-width: 767px)
 	.header__nav.header__nav--left
 		padding-right: 4rem
+	.villas__filter-form .form__group-content
+		flex-wrap: wrap
+	.product__reviews-add-submit
+		margin-left: auto
+		margin-right: auto
+	.product__reviews-content
+		flex-wrap: wrap
+	.product__reviews-items,
+	.product__reviews-add
+		width: 100%
+	.product__reviews-add
+		margin-top: 1.8rem
+	.contacts-inner__info
+		padding-right: 0%
+	.contacts-inner__content
+		font-size: 14px
+	.contacts-inner__map
+		height: 30rem
+	.product__reservation > .container
+		flex-wrap: wrap
+	.product__reservation-cta,
+	.product__reservation-person
+		width: 100%
+	.product__reservation-person
+		order: 1
+		text-align: center
+	.product__reservation-cta
+		order: 2
+		margin-top: 1.5rem
+	.villas__filter-form .form__group
+		width: 31.5%
+		margin-right: 2.75%
+		&:nth-child(3n)
+			margin-right: 0
+	.villas__filter-btn
+		width: 31.5%
+		margin-top: 2.7rem
+	.complexes__item
+		width: 48%
+		margin-right: 4%
+		&:nth-child(3n)
+			margin-right: 4%
+		&:nth-child(2n)
+			margin-right: 0
 	.header__nav.header__nav--right
 		padding-left: 4rem
 	.header__video
@@ -1844,6 +2214,7 @@ a.logo
 		display: block
 	.offers__content
 		width: 100%
+
 	.banner
 		min-height: 20rem
 	.product__details
@@ -1962,6 +2333,35 @@ a.logo
 		left: 14%
 	.arrow.arrow--next-gallery
 		right: 14%
+	.product__reservation-top
+		flex-wrap: wrap
+	.product__reservation .form__group.form__group--name, .product__reservation .form__group.form__group--surname,.product__reservation .form__group.form__group--date, .product__reservation-bottom-left .form__group
+		width: 48%
+	.product__reservation .form__group.form__group--time, .product__reservation .form__group.form__group--quantity
+		width: 21.8%
+	.product__reservation-bottom
+		flex-wrap: wrap
+	.product__reservation-bottom-left,
+	.product__reservation-bottom-right
+		width: 100%
+	.product__reservation-bottom-left
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+	.product__form-submit
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+	.product__reservation-bottom
+		position: relative
+		padding-bottom: 3rem
+	.product__reservation-bottom-right .form__group textarea
+		height: 8rem
 
 @media screen and (max-width: 540px)
 	.header__modal-group
@@ -1981,6 +2381,18 @@ a.logo
 		margin-top: 1.9rem
 	.reviews__controls
 		margin-top: 1.3rem
+	.contacts-inner__content
+		flex-direction: column
+	.contacts-inner__map
+		height: 20rem
+		width: 100%
+		margin-bottom: 2rem
+	.contacts-inner__info
+		width: 100%
+	.contacts-inner__block
+		margin-bottom: 1.2rem
+		&:last-child
+			margin-bottom: 0
 
 @media screen and (max-width: 500px)
 	.articles__slider,
@@ -2016,7 +2428,15 @@ a.logo
 		z-index: 2
 	.header__top-left
 		flex-wrap: wrap
-
+	.product__reviews-item-photo
+		margin: auto
+	.product__reviews-item
+		flex-direction: column
+		text-align: center
+	.product__reviews-item-content
+		width: 100%
+		margin-top: 1.2em
+		margin-left: 0
 	.form-section__form 
 		.form__group-content
 			flex-wrap: wrap
@@ -2135,6 +2555,30 @@ a.logo
 	.help-form__form .form__group
 		width: 100%
 		margin: 0 0 0.8rem
+	.complexes__inner-content
+		width: 90%
+		margin: 0 auto
+	.villas__filter-form .form__group
+		width: 47.5%
+		margin-right: 5%
+		margin-bottom: 1.3rem
+		&:nth-child(3n)
+			margin-right: 5%
+		&:nth-child(2n)
+			margin-right: 0
+	.villas__filter-btn
+		width: 47.5%
+		margin-top: 0
+		margin-bottom: 1.45rem
+	.villas__filter
+		margin-bottom: 2.1rem
+	.complexes__item
+		width: 100%
+		margin-right: 0%
+		&:last-child
+			margin-bottom: 0
+		&:nth-child(3n)
+			margin-right: 0%
 	.help-form__btn
 		margin-top: 1.2rem
 	.jquery-modal.blocker.current
