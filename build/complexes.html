@@ -270,8 +270,26 @@
   </header>
 
   <section class="inner">
+    <div class="complexes__banner">
+      <img src="img/complexes-banner.jpg" alt="best complexes of Phuket" />
+      <h1>best complexes of Phuket</h1>
+    </div>
     <div class="container">
-      <h2 class="caption-inner">complexes</h2>
+      <div class="complexes__inner-filter">
+        <form class="complexes__inner-form">
+          <label class="form__group-content">
+            <label class="form__group">
+              <label class="form__group-label">Beach</label>
+              <select class="styled-select" id="js-select-beach">
+                <option value="1">Rendezvous Bay</option>
+                <option value="2">Rendezvous Bay1</option>
+                <option value="4">Rendezvous Bay2</option>
+              </select>
+            </label>
+            <input type="submit" class="btn btn--filled btn--inline--block complexes__filter-btn" value="Search" />
+          </label>
+        </form>
+      </div>
       <div class="complexes__inner-content">
         <div class="complexes__item">
           <a href="#" class="complexes__item-img">
@@ -373,6 +391,34 @@
           </li>
         </ul>
       </div>
+      <div class="complexes__map">
+        <div class="container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059353029!2d-74.25986548248684!3d40.697149419326095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1531922144802" allowfullscreen></iframe>
+        </div>
+      </div>
+      
+      <div class="complexes__form">
+        <div class="container">
+          <form class="help-form__form">
+            <label class="help-form__caption">We will help you with advice or choice</label>
+            <label class="help-form__content">
+              <label class="form__group">
+                <input type="text" name="username" required placeholder="Enter your name" />
+              </label>
+              <label class="form__group">
+                <input type="tel" name="userphone" required placeholder="Enter your number" />
+              </label>
+              <label class="form__group">
+                <input type="email" name="useremail" required placeholder="Enter your e-mail" />
+              </label>
+              <input type="submit" value="Sent" class="btn btn--filled help-form__btn" />
+            </label>
+          </form>
+        </div>
+      </div>
+
+
+
     </div>
   </section>
 

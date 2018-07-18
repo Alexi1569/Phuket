@@ -426,7 +426,7 @@
 
     <div class="product__map">
       <div class="container">
-        <div id="map"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059353029!2d-74.25986548248684!3d40.697149419326095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1531922144802" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -648,31 +648,6 @@
       </form>
     </div>
   </div>
-  <script>
-    function initMap() {
-      // Styles a map in night mode.
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 40.674, lng: -73.945},
-        zoom: 12,
-      });
-
-      var markerImage = new google.maps.MarkerImage(
-          'img/placeholder.png',
-          new google.maps.Size(17,26),
-          new google.maps.Point(0,0),
-          new google.maps.Point(0,33)
-      );
-
-      var marker = new google.maps.Marker({
-        position: map.getCenter(),
-        icon: markerImage,
-        map: map
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtgBHDdtUEn4EEcC8ZvYhicaYIHFgFiZ8&callback=initMap"
-  async defer></script>
-
 
 
 

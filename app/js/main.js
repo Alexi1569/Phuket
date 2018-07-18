@@ -28,7 +28,9 @@ jQuery(document).ready(function($) {
 	});
 
 	if ($('#js-select-day').length) {
-		$('#js-select-day').SumoSelect({});
+		$('#js-select-day').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-product-slider').length) {
@@ -82,51 +84,75 @@ jQuery(document).ready(function($) {
 	}
 
 	if ($('#js-select-time').length) {
-		$('#js-select-time').SumoSelect({});
+		$('#js-select-time').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-status').length) {
-		$('#js-select-status').SumoSelect({});
+		$('#js-select-status').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-type').length) {
-		$('#js-select-type').SumoSelect({});
+		$('#js-select-type').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-room').length) {
-		$('#js-select-room').SumoSelect({});
+		$('#js-select-room').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-beach').length) {
-		$('#js-select-beach').SumoSelect({});
+		$('#js-select-beach').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-quantity').length) {
-		$('#js-select-quantity').SumoSelect({});
+		$('#js-select-quantity').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-location').length) {
-		$('#js-select-location').SumoSelect({});
+		$('#js-select-location').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-area').length) {
-		$('#js-select-area').SumoSelect({});
+		$('#js-select-area').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-distance').length) {
-		$('#js-select-distance').SumoSelect({});
+		$('#js-select-distance').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-price-range').length) {
-		$('#js-select-price-range').SumoSelect({});
+		$('#js-select-price-range').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-sort-quantity').length) {
-		$('#js-select-sort-quantity').SumoSelect({});
+		$('#js-select-sort-quantity').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-sort-price').length) {
-		$('#js-select-sort-price').SumoSelect({});
+		$('#js-select-sort-price').SumoSelect({
+			floatWidth: 250,
+		});
 	}
 
 	if ($('#js-select-date').length) {
