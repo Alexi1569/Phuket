@@ -274,22 +274,6 @@ input[type="submit"]
 .section--margin-top
 	margin-top: 3.12500rem
 
-.complex-page
-	.complexes__item-address
-		margin: 0.625rem 0 1.75rem
-	.complexes__item-address
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		align-items: baseline
-		justify-content: flex-start
-	.complexes__item-address-text
-		margin-right: 1.1875rem
-	.caption-inner
-		margin-bottom: 0
-
 .btn
 	display: block
 	font-size: 11px
@@ -798,6 +782,90 @@ a.logo
 				margin-right: 0
 
 .complexes
+	&__form
+		margin-top: 2.8125rem
+	&__map
+		margin-top: 2.8125rem
+		& > .container
+			height: 18.12500rem
+			iframe
+				width: 100%
+				height: 100%
+				border: 0
+				display: block
+	&__inner
+		&-filter
+			padding: 1.5rem 0
+			.form__group-content
+				justify-content: flex-start
+				align-items: flex-end
+			.form__group
+				width: 12.1875rem
+			.complexes__filter-btn
+				padding: 0 2.5rem
+				margin-left: 1.25rem
+				margin-bottom: 3px
+	&__banner
+		min-height: 12.5rem
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		h1
+			font-size: 1.0625em
+			color: #fff
+			text-transform: uppercase
+			letter-spacing: 0.0001em
+			padding: 1rem 0
+			text-align: center
+			line-height: 1.3
+	.slick-list
+		margin: 0 -0.84375rem
+	.slick-slide
+		margin: 0 0.84375rem
+	&__content
+		position: relative
+	&__controls
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+	&__slider
+		padding-right: 5.87719298%
+	&__slide
+		color: $text
+		&-img
+			display: block
+			img
+				max-width: 100%
+				height: auto
+				display: block
+				margin: auto
+		&-title
+			margin-top: 1.5625rem
+			font-size: 0.6875em
+			font-family: $bold
+			text-transform: uppercase
+			color: inherit
+			line-height: 1.45454545
+			display: block
+		&-excerpt
+			font-size: 0.8125em
+			font-family: $light
+			text-shadow: 0px 0px 0px $text
+			line-height: 1.38461538
+			margin-top: 0.45rem
 	&__inner-content
 		display: -webkit-flex
 		display: -moz-flex
@@ -1088,91 +1156,6 @@ a.logo
 			width: 100%
 			border: 0
 			display: block
-
-.complexes
-	&__form
-		margin-top: 2.8125rem
-	&__map
-		margin-top: 2.8125rem
-		& > .container
-			height: 18.12500rem
-			iframe
-				width: 100%
-				height: 100%
-				border: 0
-				display: block
-	&__inner
-		&-filter
-			padding: 1.5rem 0
-			.form__group-content
-				justify-content: flex-start
-				align-items: flex-end
-			.form__group
-				width: 12.1875rem
-			.complexes__filter-btn
-				padding: 0 2.5rem
-				margin-left: 1.25rem
-				margin-bottom: 3px
-	&__banner
-		position: relative
-		img
-			max-width: 100%
-			display: block
-			margin: auto
-			height: auto
-		h1
-			position: absolute
-			left: 50%
-			top: 50%
-			font-size: 1.0625em
-			color: #fff
-			text-transform: uppercase
-			letter-spacing: 0.0001em
-			transform: translate(-50%, -50%)
-	.slick-list
-		margin: 0 -0.84375rem
-	.slick-slide
-		margin: 0 0.84375rem
-	&__content
-		position: relative
-	&__controls
-		position: absolute
-		right: 0
-		top: 0
-		bottom: 0
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-		align-items: center
-	&__slider
-		padding-right: 5.87719298%
-	&__slide
-		color: $text
-		&-img
-			display: block
-			img
-				max-width: 100%
-				height: auto
-				display: block
-				margin: auto
-		&-title
-			margin-top: 1.5625rem
-			font-size: 0.6875em
-			font-family: $bold
-			text-transform: uppercase
-			color: inherit
-			line-height: 1.45454545
-			display: block
-		&-excerpt
-			font-size: 0.8125em
-			font-family: $light
-			text-shadow: 0px 0px 0px $text
-			line-height: 1.38461538
-			margin-top: 0.45rem
 
 .banner
 	background-position: center
@@ -2015,6 +1998,8 @@ a.logo
 @media screen and (max-width: 1199px)
 	.header__video
 		height: 33rem
+	.complexes__banner
+		min-height: 11.5rem
 	.offers__item-share
 		margin-right: 0.5rem
 	.offers__item-btn
@@ -2064,7 +2049,8 @@ a.logo
 		width: 3.4rem
 	.product__reviews-item-content
 		margin-left: 1rem
-
+	.complexes__banner
+		min-height: 10rem
 	.contacts-inner__info
 		padding-right: 4%
 	.form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span
@@ -2199,6 +2185,8 @@ a.logo
 		padding-right: 4rem
 	.villas__filter-form .form__group-content
 		flex-wrap: wrap
+	.complexes__banner
+		min-height: 8rem
 	.product__reviews-add-submit
 		margin-left: auto
 		margin-right: auto
