@@ -1791,6 +1791,25 @@ a.logo {
   width: 8.33333333%;
 }
 
+.rent-page .product__details {
+  flex: 1;
+  margin-right: 4.56140351%;
+}
+
+.rent-page .product__advantages-list tr td {
+  padding-right: 0;
+}
+
+.product__calendar {
+  width: 32.0175439%;
+}
+
+.product__calendar-wrap {
+  background: url(../img/calendar.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 16.75rem;
+}
+
 .product__filter-wrapper {
   margin-top: 3.12500rem;
 }
@@ -2212,6 +2231,72 @@ a.logo {
   font-size: 0.7em;
 }
 
+.product__seasons {
+  width: 24.5614035%;
+  margin-right: 3.50877193%;
+}
+
+.product__seasons-list {
+  width: 100%;
+  text-align: left;
+  letter-spacing: 0.001em;
+  color: #333;
+  border: 1px solid #dddddd;
+}
+
+.product__seasons-list td,
+.product__seasons-list th {
+  padding: 0 1.37500rem;
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.product__seasons-list th {
+  font-family: "Circe bold";
+  font-size: 0.6875em;
+  text-transform: uppercase;
+}
+
+.product__seasons-list th span {
+  padding: 1.25rem 0;
+  display: inline-block;
+}
+
+.product__seasons-list th:last-child {
+  border-right: 0;
+}
+
+.product__seasons-list td {
+  font-size: 0.8125em;
+}
+
+.product__seasons-list td:last-child {
+  border-right: 0;
+}
+
+.product__seasons-list td span {
+  padding: 1rem 0;
+  display: inline-block;
+}
+
+.product__advantages {
+  margin-top: 3.4375rem;
+}
+
+.product__advantages-list {
+  width: 100%;
+}
+
+.product__advantages-list--row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .product__advantages-list tr {
   vertical-align: top;
 }
@@ -2220,7 +2305,7 @@ a.logo {
   padding-right: 4.4rem;
 }
 
-.product__advantages-list tr td:last-child {
+.product__advantages-list tr td:last-of-type {
   padding-right: 0;
 }
 

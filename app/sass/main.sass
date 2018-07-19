@@ -1364,8 +1364,20 @@ a.logo
 .product__filter-wrapper .form__group--rooms
 	width: 8.33333333%
 
+.rent-page 
+	.product__details
+		flex: 1
+		margin-right: 4.56140351%
+	.product__advantages-list tr td
+		padding-right: 0
 
 .product
+	&__calendar
+		width: 32.0175439%
+		&-wrap
+			background: url(../img/calendar.jpg) no-repeat center
+			background-size: cover
+			min-height: 16.75rem
 	&__filter
 		&-wrapper
 			margin-top: 3.12500rem
@@ -1654,13 +1666,53 @@ a.logo
 					color: #434343
 					sup
 						font-size: 0.7em
-	&__advantages
+	&__seasons
+		width: 24.5614035%
+		margin-right: 3.50877193%
 		&-list
+			width: 100%
+			text-align: left
+			letter-spacing: 0.001em
+			color: #333
+			border: 1px solid #dddddd
+			td,
+			th
+				padding: 0 1.37500rem
+				border-bottom: 1px solid #dddddd
+				border-right: 1px solid #dddddd
+			th
+				font-family: $bold
+				font-size: 0.6875em
+				text-transform: uppercase
+				span
+					padding: 1.25rem 0
+					display: inline-block
+				&:last-child
+					border-right: 0
+			td
+				font-size: 0.8125em
+				&:last-child
+					border-right: 0
+				span
+					padding: 1rem 0
+					display: inline-block
+	&__advantages
+		margin-top: 3.4375rem
+		&-list
+			width: 100%
+			&--row
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
 			tr
 				vertical-align: top
 				td
 					padding-right: 4.4rem
-					&:last-child
+					&:last-of-type
 						padding-right: 0
 					p
 						font-size: 0.8125em
