@@ -318,6 +318,10 @@ input[type="submit"] {
   opacity: 1;
 }
 
+.complexes__banner h1 {
+  margin: 0 1rem;
+}
+
 .form__group {
   text-align: left;
 }
@@ -1291,7 +1295,8 @@ a.logo {
   width: 15.1754386%;
 }
 
-.news__content {
+.news__content-item {
+  margin-bottom: 2.8125rem;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -1300,30 +1305,108 @@ a.logo {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -moz-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
-.news__content-item {
-  width: 22.8070175%;
-  margin-right: 2.92397667%;
-  margin-bottom: 2.5rem;
+.news__content-item .articles__slide-img {
   max-width: 260px;
 }
 
-.news__content-item:nth-child(4n) {
-  margin-right: 0;
+.news__content-item .articles__slide-info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 2.8125rem;
+}
+
+.news__content-item .articles__slide-title {
+  text-transform: uppercase;
+  font-size: 0.6875em;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+.news__content-item .articles__slide-see {
+  color: #999;
+  cursor: pointer;
+}
+
+.news__content-item .articles__slide-see.opened svg {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.news__content-item .articles__slide-see svg {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 11px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  height: 11px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-left: 3px;
+}
+
+.news__content-item .articles__slide-text {
+  margin-top: 1.25rem;
+  color: #303030;
+  font-size: 0.8125em;
+  line-height: 1.69230769;
+}
+
+.news__content-item .articles__slide-text p {
+  position: absolute;
+  -webkit-transition: 0.6s all ease;
+  -o-transition: 0.6s all ease;
+  -moz-transition: 0.6s all ease;
+  transition: 0.6s all ease;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.news__content-item .articles__slide-text p.articles__slide-text--inline {
+  display: inline;
+  position: initial;
+  opacity: 1;
+  height: auto;
+}
+
+.news__content-item .articles__slide-text p.articles__slide-text--block {
+  display: block;
+  margin-bottom: 0.7rem;
+  position: initial;
+  opacity: 1;
+  height: auto;
+}
+
+.beaches-page .complexes__banner {
+  min-height: 24.6875rem;
+}
+
+.beaches-page .complexes__inner-content {
+  margin-top: 3.12500rem;
 }
 
 .complexes__form {
@@ -1559,6 +1642,10 @@ a.logo {
   font-family: "Circe light";
   text-shadow: 0 0 0 #000;
   margin-top: 1rem;
+}
+
+.complexes__item-address.complexes__item-address--with-link {
+  margin-top: 0.5rem;
 }
 
 .complexes__item-address-text {
@@ -2160,6 +2247,122 @@ a.logo {
   padding-right: 2.12500rem;
 }
 
+.villas-page .form__group.form__group--no-border {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.villas-page .product__filter-wrapper {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.villas-page .caption-inner {
+  margin-bottom: 0;
+}
+
+.villas-page__sorts {
+  margin-top: 1.25rem;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.villas-page__sorts--item {
+  display: block;
+  position: relative;
+  padding-right: 0.9375rem;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+.villas-page__sorts--item:first-child {
+  margin-right: 1.75rem;
+}
+
+.villas-page__sorts--desc:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url(../img/header-language-arrow.svg) no-repeat center;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+  right: 0;
+  top: 50%;
+}
+
+.villas-page__sorts-title {
+  margin-right: 1.12500rem;
+  font-size: 0.625em;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 0.0005em;
+}
+
+.villas-page__sorts-fields {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin-bottom: 2px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.villas-page__sorts-fields .form__group {
+  margin-right: 1.75rem;
+}
+
+.villas-page__sorts-fields .form__group:last-child {
+  margin-right: 0;
+}
+
 .share__btn {
   display: block;
   width: 1.1875rem;
@@ -2754,6 +2957,10 @@ a.logo {
   color: #434343;
 }
 
+.product__details-list tr td.product__details-list--descr sup {
+  font-size: 0.7em;
+}
+
 .product__advantages-list tr {
   vertical-align: top;
 }
@@ -2966,11 +3173,11 @@ a.logo {
 }
 
 .arrow.arrow--prev-gallery {
-  left: 21.3675214%;
+  left: 14.3675214%;
 }
 
 .arrow.arrow--next-gallery {
-  right: 21.3675214%;
+  right: 14.3675214%;
   -webkit-transform: translateY(-50%) rotate(180deg);
   -moz-transform: translateY(-50%) rotate(180deg);
   -ms-transform: translateY(-50%) rotate(180deg);
@@ -3612,6 +3819,9 @@ a.logo {
   .complexes__banner {
     min-height: 11.5rem;
   }
+  .beaches-page .complexes__banner {
+    min-height: 21rem;
+  }
   .offers__item-share {
     margin-right: 0.5rem;
   }
@@ -3626,10 +3836,10 @@ a.logo {
     width: 28rem;
   }
   .arrow.arrow--prev-gallery {
-    left: 18%;
+    left: 24%;
   }
   .arrow.arrow--next-gallery {
-    right: 18%;
+    right: 24%;
   }
   .banner {
     min-height: 27rem;
@@ -3639,6 +3849,9 @@ a.logo {
   }
   .offers__item-characteristics li span {
     font-size: 0.7em;
+  }
+  .product__slide:not(.slick-center) .product__slide-img {
+    width: 21rem;
   }
 }
 
@@ -3674,6 +3887,31 @@ a.logo {
 @media screen and (max-width: 991px) {
   .header__video {
     height: 28rem;
+  }
+  .product__slide:not(.slick-center) .product__slide-img {
+    width: 17rem;
+  }
+  .arrow.arrow--prev-gallery {
+    left: 19%;
+  }
+  .arrow.arrow--next-gallery {
+    right: 19%;
+  }
+  .news__content-item .articles__slide-info {
+    margin-left: 2.3rem;
+  }
+  .news__content-item .articles__slide-img {
+    max-width: 220px;
+  }
+  .news__content-item .articles__slide-text {
+    margin-top: 1rem;
+  }
+  .news__content-item .articles__slide-text {
+    font-size: .78em;
+    line-height: 1.65;
+  }
+  .beaches-page .complexes__banner {
+    min-height: 18rem;
   }
   .product__reviews-item-photo {
     width: 3.4rem;
@@ -3884,6 +4122,26 @@ a.logo {
   .header__nav.header__nav--left {
     padding-right: 4rem;
   }
+  .beaches-page .complexes__banner {
+    min-height: 14rem;
+  }
+  .product__slide:not(.slick-center) .product__slide-img {
+    width: 15rem;
+  }
+  .news__content-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .news__content-item .articles__slide-info {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
   .villas__filter-form .form__group-content {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -4090,16 +4348,6 @@ a.logo {
   .header__hamburger {
     display: block;
   }
-  .news__content-item {
-    width: 31.5%;
-    margin-right: 2.75%;
-  }
-  .news__content-item:nth-child(4n) {
-    margin-right: 2.75%;
-  }
-  .news__content-item:nth-child(3n) {
-    margin-right: 0;
-  }
   .header__bottom {
     padding: 1rem 0;
     -webkit-box-pack: start;
@@ -4148,6 +4396,9 @@ a.logo {
 @media screen and (max-width: 600px) {
   .footer__follow {
     width: 80%;
+  }
+  .product__slide:not(.slick-center) .product__slide-img {
+    width: 10rem;
   }
   .offers__item-prices.offers__item-prices--share {
     -webkit-box-orient: vertical;
@@ -4280,6 +4531,16 @@ a.logo {
   .complexes__slider {
     padding-right: 3rem;
   }
+  .villas-page__sorts {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .product__slide:not(.slick-center) .product__slide-img {
+    width: 7.5rem;
+  }
   .product__filter-wrapper .form__group {
     margin-top: 0.8rem;
     margin-right: 0;
@@ -4314,19 +4575,6 @@ a.logo {
   }
   .arrow.arrow--next-gallery {
     right: 11%;
-  }
-  .news__content-item {
-    width: 46%;
-    margin-right: 4%;
-  }
-  .news__content-item:nth-child(4n) {
-    margin-right: 4%;
-  }
-  .news__content-item:nth-child(3n) {
-    margin-right: 4%;
-  }
-  .news__content-item:nth-child(2n) {
-    margin-right: 0;
   }
 }
 
@@ -4424,6 +4672,9 @@ a.logo {
   .complexes .slick-slide,
   .complexes .slick-list {
     margin: 0;
+  }
+  .beaches-page .complexes__banner {
+    min-height: 11rem;
   }
   .reviews__slide-inner {
     width: 100%;
@@ -4635,16 +4886,6 @@ a.logo {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .news__content-item {
-    margin-right: 0;
-    width: 100%;
-  }
-  .news__content-item:nth-child(4n) {
-    margin-right: 0;
-  }
-  .news__content-item:nth-child(3n) {
-    margin-right: 0;
   }
 }
 
