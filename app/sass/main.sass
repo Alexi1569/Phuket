@@ -187,12 +187,10 @@ input[type="submit"]
 
 .checkbox:checked + label:after 
 	opacity: 1
-	
+
+
 .form
 	&__group	
-		&.form__group--white
-			input:not([type="submit"])
-				border: 0
 		text-align: left
 		input:not([type="submit"]),
 		textarea
@@ -1023,13 +1021,44 @@ a.logo
 			padding-right: 1.87500rem
 		&-prices
 			letter-spacing: 0.001em
-			& > *
-				display: inline-block
-				vertical-align: middle
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: baseline
+			justify-content: flex-start
+			flex-direction: column
+			&.offers__item-prices--share
+				flex-direction: row
 		&-price
 			font-family: $bold
 			color: $text
 			font-size: 0.9375em
+			&.offers__item-price--day
+				&:after
+					content: '/day'
+					font-family: $reg
+			&.offers__item-price--month
+				&:after
+					content: '/month'
+					font-family: $reg
+			&--share
+				font-family: $light
+				color: #949494
+				font-size: 0.75em
+				position: relative
+				margin-right: 0.75rem
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					top: 50%
+					right: 0
+					height: 1px
+					width: 100%
+					background-color: #949494
 			span
 				font-size: 0.933333333em
 				font-family: $reg
@@ -1198,10 +1227,35 @@ a.logo
 		background: url(../img/share.svg) no-repeat center
 		background-size: cover
 
+.product__filter-wrapper .form__group-content
+	align-items: flex-end
+	justify-content: flex-start
 
+.product__filter-wrapper .villas__filter
+	margin-bottom: 2rem
+
+.product__filter-wrapper .form__group
+	margin-right: 1.25rem
+
+.product__filter-wrapper input[type="submit"]
+	margin-bottom: 2px
+
+.product__filter-wrapper .form__group--date input
+	margin-bottom: 2px
+	height: 1.87500rem
+
+.product__filter-wrapper .form__group--date,
+.product__filter-wrapper .form__group--status
+	width: 19.7368421%
+
+.product__filter-wrapper .form__group--rooms
+	width: 8.33333333%
 
 
 .product
+	&__filter
+		&-wrapper
+			margin-top: 3.12500rem
 	&__reviews
 		margin-top: 4.0625rem
 		&-content
@@ -2149,6 +2203,7 @@ a.logo
 	.header__top-right
 		width: 100%
 		justify-content: center
+
 	.header__search
 		flex: 0
 	.header__top-left,
@@ -2156,6 +2211,7 @@ a.logo
 		margin-bottom: 1rem
 	.header
 		padding-top: 1rem
+
 	.form-section__form 
 		.form__group-content
 			flex-wrap: wrap
@@ -2271,6 +2327,10 @@ a.logo
 		width: 85%
 	.reviews__slide-text
 		line-height: 1.5
+	.product__filter-wrapper .form__group--date, .product__filter-wrapper .form__group--status
+		width: 33%
+	.product__filter-wrapper .form__group--rooms
+		width: 15%
 
 @media screen and (max-width: 700px)
 	.advantages__img
@@ -2338,6 +2398,8 @@ a.logo
 @media screen and (max-width: 600px)
 	.footer__follow
 		width: 80%
+	.offers__item-prices.offers__item-prices--share
+		flex-direction: column
 	.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type
 		margin-right: 2rem
 	.product__slide.slick-center .product__slide-img
@@ -2411,6 +2473,17 @@ a.logo
 	.articles__slider,
 	.complexes__slider
 		padding-right: 3rem
+	.product__filter-wrapper .form__group
+		margin-top: 0.8rem
+		margin-right: 0
+	.product__filter-wrapper .form__group:first-child
+		margin-top: 0
+	.product__filter-wrapper .form__group-content
+		flex-wrap: wrap
+	.product__filter-wrapper .form__group--date, .product__filter-wrapper .form__group--status
+		width: 100%
+	.product__filter-wrapper .form__group--rooms
+		width: 100%
 	.footer__left
 		width: 100%
 		margin-bottom: 1rem
