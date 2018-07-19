@@ -44,7 +44,6 @@ jQuery(document).ready(function($) {
 			var imgWidth = $img.outerWidth();
 
 			$img.css({
-				'transform': 'translateX(-' + ((imgWidth - w) / 2) + 'px) scale(1)',
 				'opacity': '1',
 			});
 
@@ -62,20 +61,17 @@ jQuery(document).ready(function($) {
 		$productsSlider.on('init', function() {
 
 			setTimeout(function() {
-				$productsSlider.css({
-					'opacity': '1',
-				})
-			}, 500);
-
-			setTimeout(function() {
 				alignSlides();
 				alignCenter();
 			}, 0);
 		});
 		
 		$productsSlider.slick({
-			slidesToShow: 3,
+			slidesToShow: 1,
 		  centerMode: true,
+		  variableWidth: true,
+		  cssEase: 'ease-in-out',
+		  speed: 550,
 		  centerPadding: '0px',
 		  appendArrows: '.product__controls',
 		  prevArrow: '<button class="arrow arrow-gallery arrow--prev-gallery"></button>',

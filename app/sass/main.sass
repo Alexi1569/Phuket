@@ -1519,12 +1519,8 @@ a.logo
 								background-color: #c5c5c5
 								background-image: url(../img/close-product-page.svg)
 								background-size: 6px
-	&__slider
-		opacity: 0
-		transition: 1s all ease
-	&__slide:not(.slick-active)
-		transform: scale(0)
-	&__slide.slick-active:not(.slick-center)
+
+	&__slide:not(.slick-center)
 		.product__slide-inner
 			display: -webkit-flex
 			display: -moz-flex
@@ -1533,16 +1529,12 @@ a.logo
 			display: flex
 			height: 100%
 			align-items: center
-			transition: 0.4s all ease
 		.product__slide-img
-			width: 100%
-			img
-				transform: none !important
+			width: 25.87500rem
 	&__slide
-		transition: 0.4s all ease
+
 		&-img
 			position: relative
-			
 			&:before
 				content: ''
 				display: block
@@ -1554,17 +1546,15 @@ a.logo
 				z-index: 1
 				opacity: 1
 				background-color: rgba(#000000, .5)
-				transition: 0.4s all ease
+				transition: 1s all ease
 		&.slick-center
 			.product__slide-img:before
 				opacity: 0
 			.product__slide-img
-				width: 31.25rem
+				width: 45.12500rem
 				img
 					max-width: 100%
-					transform: scale(0.8)
 					opacity: 0
-					transition: 0.3s opacity ease
 		img
 			display: block
 			height: auto
