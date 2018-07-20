@@ -1401,10 +1401,6 @@ a.logo {
   height: auto;
 }
 
-.beaches-page .complexes__banner {
-  min-height: 24.6875rem;
-}
-
 .beaches-page .complexes__inner-content {
   margin-top: 3.12500rem;
 }
@@ -3945,9 +3941,6 @@ a.logo {
   .complexes__banner {
     min-height: 11.5rem;
   }
-  .beaches-page .complexes__banner {
-    min-height: 21rem;
-  }
   .offers__item-share {
     margin-right: 0.5rem;
   }
@@ -4053,9 +4046,6 @@ a.logo {
   .news__content-item .articles__slide-text {
     font-size: .78em;
     line-height: 1.65;
-  }
-  .beaches-page .complexes__banner {
-    min-height: 18rem;
   }
   .product__reviews-item-photo {
     width: 3.4rem;
@@ -4298,9 +4288,6 @@ a.logo {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-  .beaches-page .complexes__banner {
-    min-height: 14rem;
   }
   .news__content-item {
     -webkit-box-orient: vertical;
@@ -4919,9 +4906,6 @@ a.logo {
   .complexes .slick-slide,
   .complexes .slick-list {
     margin: 0;
-  }
-  .beaches-page .complexes__banner {
-    min-height: 11rem;
   }
   .reviews__slide-inner {
     width: 100%;
