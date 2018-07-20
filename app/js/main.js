@@ -37,45 +37,28 @@ jQuery(document).ready(function($) {
 
 		var $productsSlider = $('#js-product-slider');
 
-		function alignCenter() {
-			var $centerSlide = $productsSlider.find('.slick-slide.slick-current.slick-active.slick-center');
-			var w = $centerSlide.outerWidth();
-			var $img = $centerSlide.find('img');
-			var imgWidth = $img.outerWidth();
-
-			$img.css({
-				'opacity': '1',
-			});
-
-		}
-
-		function alignSlides() {
-			var stHeight = $productsSlider.find('.slick-track').height();
-			$productsSlider.find('.slick-slide').css('height',stHeight + 'px' );
-		}
-
-		$productsSlider.on('afterChange', function(event, slick, currentSlide){
-		  alignCenter();
-		});
-
-		$productsSlider.on('init', function() {
-
-			setTimeout(function() {
-				alignSlides();
-				alignCenter();
-			}, 0);
-		});
-		
 		$productsSlider.slick({
 			slidesToShow: 1,
 		  centerMode: true,
-		  variableWidth: true,
-		  cssEase: 'ease-in',
+		  cssEase: 'ease-in-out',
 		  centerPadding: '0px',
+		  speed: 450,
 		  appendArrows: '.product__controls',
 		  prevArrow: '<button class="arrow arrow-gallery arrow--prev-gallery"></button>',
 		  nextArrow: '<button class="arrow arrow-gallery arrow--next-gallery"></button>',
+		  asNavFor: '#js-product-previews',
 		});
+
+		$('#js-product-previews').slick({
+			slidesToShow: 2,
+		  centerMode: true,
+		  variableWidth: true,
+		  speed: 450,
+		  cssEase: 'ease-in-out',
+		  centerPadding: '0px',
+		  arrows: false,
+		});
+
 	}
 
 	if ($('.news-page').length) {
@@ -168,6 +151,49 @@ jQuery(document).ready(function($) {
 				format: 'DD-MM-YYYY',
 			}
 		});
+	}
+
+	if ($('#js-select-date-rent').length) {
+
+		var dates = [
+			{
+				bookStart: moment().add(1, 'days'),
+				bookEnd: moment().add(2, 'days')
+			},
+			{
+				bookStart: moment().add(4, 'days'),
+				bookEnd: moment().add(5, 'days')
+			}
+		];
+
+
+		var bookEnd = moment().add(2, 'days');
+
+
+		var $calendar = $('#js-select-date-rent');
+		$calendar.daterangepicker({
+			singleDatePicker: true,
+			parentEl: '.product__calendar',
+			isInvalidDate: function(date) {
+				for (var i = 0; i < dates.length; i++) {
+
+					if (date.format('DD-MM-YYYY') == dates[i].bookStart.format('DD-MM-YYYY')) {
+						return true;
+					} else if (date.format('DD-MM-YYYY') == dates[i].bookEnd.format('DD-MM-YYYY')) {
+						return true;
+					} else if (date.isAfter(dates[i].bookStart) && date.isBefore(dates[i].bookEnd)) {
+						return true;
+					}
+				}
+			}
+		});
+
+		$calendar.trigger('click');
+		$calendar.css({
+			'opacity': '0',
+			'position': 'absolute',
+		});
+
 	}
 
 	if ($('.rent').length) {

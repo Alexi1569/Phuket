@@ -79,7 +79,6 @@ gulp.task('js-optimize', function() {
 		'app/libs/**/*.js'
 	])
 		.pipe(concat('main.min.js'))
-		.pipe(uglify())
 		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.stream());
 });
