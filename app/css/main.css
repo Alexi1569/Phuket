@@ -17,6 +17,62 @@ input:focus, textarea:focus, button:focus {
   outline: 0;
 }
 
+.header__search li {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer__follow li {
+  list-style-type: none;
+}
+
+.footer__follow li h2 {
+  text-transform: uppercase;
+  font-family: "Circe bold";
+  margin-bottom: 0.75rem;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+.footer__follow li form input:not([type="submit"]) {
+  background-color: #fff;
+  border: 0;
+  width: 100%;
+  padding: 0.355rem 0.625rem;
+}
+
+.footer__follow li form input[type="submit"] {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #303030;
+  -webkit-border-radius: 0.625rem;
+  -moz-border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  line-height: 2rem;
+  background-color: transparent;
+  padding: 0 0 0.45rem;
+  border: 1px solid #303030;
+  height: 1.87500rem;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  margin-top: 0.625rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.footer__follow li form > p > label {
+  font-size: 0;
+}
+
 ul {
   list-style-type: none;
 }
@@ -1308,7 +1364,7 @@ a.logo {
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
-  min-height: 20.9375rem;
+  max-height: 20.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2794,22 +2850,22 @@ a.logo {
   margin-right: 0;
 }
 
-.footer__time, .footer__category, .footer__follow {
+.footer__time, .footer__category {
   font-size: 0.75em;
   font-family: "Circe light";
   text-shadow: 0px 0px 0px #303030;
 }
 
-.footer__time-nav ul, .footer__category-nav ul, .footer__follow-nav ul {
+.footer__time-nav ul, .footer__category-nav ul {
   display: inline-block;
   vertical-align: top;
 }
 
-.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type, .footer__follow-nav ul:first-of-type {
+.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type {
   margin-right: 5rem;
 }
 
-.footer__time a, .footer__category a, .footer__follow a {
+.footer__time a, .footer__category a {
   color: #303030;
 }
 
@@ -3747,6 +3803,9 @@ a.logo {
   .header__search {
     width: 100%;
     margin-left: 0;
+  }
+  .header__search li {
+    width: 100%;
   }
   .header__language:hover .header__language-select, .header__language.active .header__language-select, .header__currency:hover .header__language-select, .header__currency.active .header__language-select {
     z-index: 2;
