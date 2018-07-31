@@ -296,35 +296,4 @@ jQuery(document).ready(function($) {
 		});
 	};
 
-	if (w > 1050) {
-		$('.offers__item').hover(function() {
-			var img = $(this).find('img');
-			var imgHeight = $(img).height();
-			var selfHeight = $(this).outerHeight();
-			var imgContainer = $(this).find('.offers__item-img');
-			var imgContainerHeight = $(imgContainer).outerHeight();
-			var offset = selfHeight / 6 / 16;
-			var resultHeight = imgContainerHeight - offset * 16;
-
-			img.css({
-				'transform': 'translateY(-'+ offset +'rem)',
-			});
-
-			imgContainer.css({
-				'height': resultHeight,
-			})
-		}, function() {
-			var img = $(this).find('img');
-			var imgContainer = $(this).find('.offers__item-img');
-
-			img.css({
-				'transform': 'translateY(0)',
-			});
-
-			imgContainer.css({
-				'height': 'auto',
-			})
-		})
-	}
-
 });

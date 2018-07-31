@@ -476,6 +476,7 @@ a.logo {
 }
 
 .header__breadcrumbs-list li a {
+  color: inherit;
   display: inline-block;
 }
 
@@ -1366,18 +1367,25 @@ a.logo {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  min-height: 20.9375rem;
+  height: auto;
 }
 
 .offers__item:hover {
   box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
+.offers__item:hover .offers__item-img img {
+  margin-top: -3.4375rem;
+}
+
 .offers__item:hover .offers__item-address,
 .offers__item:hover .offers__item-characteristics {
+  width: auto;
   opacity: 1;
   position: initial;
   z-index: 0;
-  transform: scale(1);
+  transform: translateX(0%);
 }
 
 .offers__item:nth-child(3n) {
@@ -1403,9 +1411,9 @@ a.logo {
 .offers__item-img img {
   max-width: 100%;
   height: auto;
-  margin: auto;
+  margin: 0 auto;
   display: block;
-  transition: 0.3s all ease;
+  transition: 0.25s all ease-in;
 }
 
 .offers__item-category {
@@ -1530,14 +1538,19 @@ a.logo {
   opacity: 0;
   position: absolute;
   z-index: -1;
-  transform: scale(0);
+  transition-delay: 0.15s;
+  width: 0;
+  transition: 0.3s width ease-in, 0.3s transform ease-in;
+  transform: translateX(-100%);
 }
 
 .offers__item-characteristics {
   margin-top: 0.625rem;
-  transition: 0.3s all ease;
+  transition: 0.3s width ease-in, 0.3s transform ease-in;
   opacity: 0;
-  transform: scale(0);
+  width: 0;
+  transition-delay: 0.15s;
+  transform: translateX(100%);
   position: absolute;
   z-index: -1;
   display: -webkit-flex;
@@ -3079,16 +3092,6 @@ a.logo {
 }
 
 @media screen and (max-width: 1050px) {
-  .offers__item .offers__item-address, .offers__item .offers__item-characteristics {
-    opacity: 1;
-    position: initial;
-    z-index: 0;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
   .offers__item-info {
     display: block;
   }
@@ -3113,6 +3116,13 @@ a.logo {
 @media screen and (max-width: 991px) {
   .header__video {
     height: 28rem;
+  }
+  .offers__item .offers__item-address, .offers__item .offers__item-characteristics {
+    opacity: 1;
+    position: initial;
+    z-index: 0;
+    transform: none;
+    width: 100%;
   }
   .rent-page .product__advantages-list--row {
     flex-wrap: wrap;
