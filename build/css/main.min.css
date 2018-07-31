@@ -251,10 +251,6 @@ textarea:-moz-placeholder {
   text-shadow: 0px 0px 0px #303030;
 }
 
-select {
-  display: none;
-}
-
 input[type="submit"] {
   cursor: pointer;
 }
@@ -1771,6 +1767,7 @@ a.logo {
   margin-bottom: 1.25rem;
   background-color: #efefef;
   letter-spacing: 0.005em;
+  max-width: 370px;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -moz-transition: 0.3s all ease;
@@ -1813,7 +1810,7 @@ a.logo {
 .offers__item:hover .offers__item-address,
 .offers__item:hover .offers__item-characteristics {
   opacity: 1;
-  position: static;
+  position: initial;
   z-index: 0;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -1942,8 +1939,8 @@ a.logo {
 }
 
 .offers__item-btn {
-  padding-left: 1.87500rem;
-  padding-right: 1.87500rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .offers__item-prices {
@@ -4011,10 +4008,6 @@ a.logo {
   .offers__item-share {
     margin-right: 0.5rem;
   }
-  .offers__item-btn {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-  }
   .offers__item-prices {
     font-size: 14px;
   }
@@ -4044,7 +4037,7 @@ a.logo {
 @media screen and (max-width: 1050px) {
   .offers__item .offers__item-address, .offers__item .offers__item-characteristics {
     opacity: 1;
-    position: static;
+    position: initial;
     z-index: 0;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -4060,6 +4053,9 @@ a.logo {
   }
   .complexes__item-excerpt {
     margin-top: 1.6rem;
+  }
+  .offers__item-btn {
+    font-size: 10px;
   }
   .offers__item {
     max-height: none;
@@ -4195,6 +4191,21 @@ a.logo {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .offers__content {
+    width: 85%;
+    margin: auto;
+  }
+  .offers__item {
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .offers__item:nth-child(3n) {
+    margin-right: 2%;
+  }
+}
+
 @media screen and (max-width: 890px) {
   .product__details-list {
     font-size: .75em;
@@ -4248,18 +4259,6 @@ a.logo {
   .villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span {
     font-size: 11px;
     line-height: 20px;
-  }
-  .offers__content {
-    width: 85%;
-    margin: auto;
-  }
-  .offers__item {
-    width: 46%;
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  .offers__item:nth-child(3n) {
-    margin-right: 2%;
   }
 }
 
@@ -4455,9 +4454,6 @@ a.logo {
   .header__video {
     height: 22rem;
   }
-  .offers__item-price {
-    display: block;
-  }
   .offers__content {
     width: 100%;
   }
@@ -4539,6 +4535,23 @@ a.logo {
     -o-transform: none;
     transform: none;
     top: -16%;
+  }
+  .offers__item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .offers__item:nth-child(2), .offers__item:nth-child(3) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .offers__content {
+    width: 50%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .advantages__info {
     padding-left: 0;
@@ -4631,14 +4644,8 @@ a.logo {
   .footer__follow {
     width: 80%;
   }
-  .offers__item-prices.offers__item-prices--share {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-box-orient: vertical;
-    -moz-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .offers__content {
+    width: 60%;
   }
   .footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type {
     margin-right: 2rem;
@@ -4772,6 +4779,9 @@ a.logo {
   }
   .product__previews .product__slide-img {
     width: 12rem;
+  }
+  .offers__content {
+    width: 70%;
   }
 }
 
@@ -4943,18 +4953,6 @@ a.logo {
   .header__socials li:last-of-type {
     margin-right: 0;
   }
-  .offers__item {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .offers__item:nth-child(2), .offers__item:nth-child(3) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .offers__content {
-    width: 78%;
-  }
   .help-form {
     padding: 2.5rem 0;
   }
@@ -5020,6 +5018,9 @@ a.logo {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  .offers__content {
+    width: 80%;
   }
   .product__form-submit {
     position: absolute;
@@ -5154,6 +5155,9 @@ a.logo {
   }
   .arrow.arrow--next-gallery {
     right: 3%;
+  }
+  .offers__content {
+    width: 100%;
   }
 }
 

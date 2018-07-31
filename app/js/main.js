@@ -30,6 +30,7 @@ jQuery(document).ready(function($) {
 	if ($('#js-select-day').length) {
 		$('#js-select-day').SumoSelect({
 			floatWidth: 250,
+			nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
 		});
 	}
 
@@ -140,6 +141,7 @@ jQuery(document).ready(function($) {
 
 	$('.styled-select').SumoSelect({
 		floatWidth: 250,
+		nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
 	})
 
 	if ($('#js-select-date').length) {
