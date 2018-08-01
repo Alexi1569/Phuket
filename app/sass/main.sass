@@ -23,6 +23,20 @@ h1, h2, h3, b, strong
 input:focus, textarea:focus, button:focus
 	outline: 0
 
+div.wpcf7 .ajax-loader
+	display: none !important
+
+.daterangepicker td.disabled, .daterangepicker option.disabled
+	background-color: #f3f3f3 !important
+	text-decoration: none !important
+	opacity: .4
+
+.children
+	margin-left: 3rem
+	margin-bottom: 2.1875rem
+	padding: 0.5rem
+	background-color: #efefef
+
 .header__search li
 	display: -webkit-flex
 	display: -moz-flex
@@ -31,6 +45,16 @@ input:focus, textarea:focus, button:focus
 	display: flex
 	align-items: center
 	justify-content: flex-start
+
+#comment-status .ajax-success
+	font-size: 0.75em
+	color: #3b7893
+	text-align: center
+
+.btn.more-reviews-btn
+	padding-left: 1.3rem
+	padding-right: 1.3rem
+	margin-left: auto
 
 .footer__follow li
 	list-style-type: none
@@ -395,55 +419,6 @@ a.logo
 				&:first-of-type
 					&:before
 						display: none
-
-	&__mobile
-		display: none
-		transform: translateX(-100%)
-		position: fixed
-		left: 0
-		top: 0
-		bottom: 0
-		transition: 0.3s all ease
-		right: 0
-		padding: 50px
-		overflow-y: scroll
-		z-index: 2
-		background-color: rgba($accent, .8)
-		&-item
-			svg
-				display: inline-block
-				width: 6px
-				height: 10px
-				vertical-align: baseline
-				transform: rotate(-90deg)
-				margin-left: 0.625rem
-		ul.header__mobile-list
-			& > li
-				border-bottom: 1px solid rgba(#fff, .3)
-				padding: 0.3rem 0
-				a
-					font-family: $bold
-					font-size: 13px
-					color: #fff
-					text-transform: uppercase
-					display: inline-block
-					
-
-			.header__mobile-list--inner
-				height: 0
-				padding: 0
-				overflow: hidden
-				transition: 0.3s all ease
-				&.active
-					padding: 0.3rem 0
-					height: auto
-				& > li
-					a
-						text-transform: none
-						
-
-		&.active
-			transform: translateX(0)
 	&__hamburger
 		display: none
 		position: relative
@@ -1162,7 +1137,7 @@ a.logo
 					display: block
 					position: absolute
 					left: 0
-					top: 50%
+					top: 40%
 					right: 0
 					height: 1px
 					width: 100%
@@ -1758,7 +1733,7 @@ a.logo
 			border-bottom: 0
 			td,
 			th
-				padding: 0 1.37500rem
+				padding: 0 0.5rem
 				border-bottom: 1px solid #dddddd
 				border-right: 1px solid #dddddd
 			th
@@ -1771,7 +1746,7 @@ a.logo
 				&:last-child
 					border-right: 0
 			td
-				font-size: 0.8125em
+				font-size: 0.75em
 				&:last-child
 					border-right: 0
 				span
@@ -2280,9 +2255,6 @@ a.logo
 @media screen and (max-width: 1199px)
 	.header__video
 		height: 33rem
-	.product__seasons-list td, .product__seasons-list th
-		padding: 0 0.9rem
-		font-size: .75em
 	.complexes__banner
 		min-height: 11.5rem
 	.offers__item-share
@@ -2662,8 +2634,6 @@ a.logo
 	.header__bottom
 		padding: 1rem 0
 		justify-content: flex-start
-	.header__mobile
-		display: block
 	.help-form__form .form__group
 		width: 31%
 		margin: 0 1.16666667%
@@ -2855,7 +2825,6 @@ a.logo
 		margin: auto
 	.product__reviews-item
 		flex-direction: column
-		text-align: center
 	.product__reviews-item-content
 		width: 100%
 		margin-top: 1.2em

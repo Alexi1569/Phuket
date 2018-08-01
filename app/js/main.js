@@ -10,6 +10,14 @@ jQuery(document).ready(function($) {
 		})
 	}
 
+	if ($('#mobile-menu').length) {
+		$('#mobile-menu').mmenu({
+			navbars: {
+				content : [ "close" ],
+			},
+		})
+	}
+
 	$(window).resize(function() {
 		w = $(window).outerWidth();
 		rentPageFooter();
@@ -283,12 +291,7 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	$('#js-mobile-menu-toggle').click(function() {
-		$('.header__mobile').toggleClass('active');
-		$(this).toggleClass('active');
-		$('html').toggleClass('no-scroll');
-		$('body').toggleClass('no-scroll');
-	});
+	
 
 	if ($('.header__mobile').length) {
 		$('.header__mobile').find('.header__mobile-item svg').click(function() {
