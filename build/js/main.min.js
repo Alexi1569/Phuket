@@ -2,6 +2,14 @@
 jQuery(document).ready(function($) {
 	var w = $(window).outerWidth();
 
+	setTimeout(function() {
+		$('#mobile-menu').css({
+			'opacity': 1,
+			'height': 'auto',
+			'overflow': 'visible',
+		})
+	}, 1000);
+
 	function rentPageFooter() {
 		var height = $('.rent').find('.footer').outerHeight() + 60;
 
