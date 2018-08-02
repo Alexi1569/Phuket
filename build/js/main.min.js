@@ -2,6 +2,41 @@
 jQuery(document).ready(function($) {
 	var w = $(window).outerWidth();
 
+	$(document).click(function(e) {
+		if ((!$(e.target.closest('.header__search')).is('.header__search')) && $('.header__search').hasClass('active')) {
+			$('.header__search').removeClass('active');
+		}
+	})
+
+	if ($('.offers__item').length) {
+		function setEqualHeightToOfferItems() {
+			var max = 0;
+
+			if (w > 991) {
+				$('.offers__item').each(function() {
+					var h = $(this).outerHeight();
+
+					if (h > max) {
+						max = h;
+					}
+				});
+
+				$('.offers__item').each(function() {
+					$(this).css({
+						'height': max + 'px',
+					})
+				});
+			}
+
+			
+		}
+
+		setEqualHeightToOfferItems();
+		$(window).resize(function() {
+			setEqualHeightToOfferItems();
+		})
+	}
+
 	setTimeout(function() {
 		$('#mobile-menu').css({
 			'opacity': 1,
@@ -13,7 +48,7 @@ jQuery(document).ready(function($) {
 	function rentPageFooter() {
 		var height = $('.rent').find('.footer').outerHeight() + 60;
 
-		$('.rent').css({
+		$('.rent').find('#page').css({
 			'padding-bottom': height + 'px',
 		})
 	}
@@ -162,7 +197,7 @@ jQuery(document).ready(function($) {
 
 	if ($('#js-select-date').length) {
 		$('#js-select-date').daterangepicker({
-			opens: 'center',
+			opens: 'left',
 			startDate: moment(),
 			endDate: moment().add(5, 'days'),
 			locale: {

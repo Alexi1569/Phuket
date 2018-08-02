@@ -11,6 +11,25 @@
   overflow: hidden;
 }
 
+span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing,
+div.wpcf7-mail-sent-ok {
+  font-size: .7em !important;
+}
+
+.logged-in-as {
+  font-size: .8em;
+  color: #777;
+}
+
+.logged-in-as a {
+  color: #3b7893;
+}
+
+span.wpcf7-not-valid-tip {
+  margin-top: 0.25rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -106,6 +125,10 @@ div.wpcf7 .ajax-loader {
 
 .footer__follow li form > p > label {
   font-size: 0;
+}
+
+#page {
+  min-height: 100vh;
 }
 
 ul {
@@ -493,7 +516,7 @@ a.logo {
   border-top: 1px solid #ebebeb;
 }
 
-.header__breadcrumbs-list {
+.header__breadcrumbs > .container {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -502,30 +525,25 @@ a.logo {
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.header__breadcrumbs-list li {
-  font-size: 0.6875em;
   text-transform: uppercase;
-  color: #585858;
 }
 
-.header__breadcrumbs-list li a {
-  color: inherit;
-  display: inline-block;
+.header__breadcrumbs > .container > span {
+  font-size: 0.6875em;
+  display: block;
 }
 
-.header__breadcrumbs-list li:last-of-type {
+.header__breadcrumbs > .container > span:last-of-type {
   color: #aeaeae;
 }
 
-.header__breadcrumbs-list li:before {
-  content: '/';
+.header__breadcrumbs > .container > span.sep {
   margin: 0 0.45rem 0 0.9375em;
 }
 
-.header__breadcrumbs-list li:first-of-type:before {
-  display: none;
+.header__breadcrumbs > .container a {
+  color: #585858;
+  display: inline-block;
 }
 
 .header__hamburger {
@@ -1340,13 +1358,10 @@ a.logo {
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
-  max-height: 20.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  min-height: 20.9375rem;
-  height: auto;
+  align-items: stretch;
 }
 
 .offers__item:hover {
@@ -1430,6 +1445,8 @@ a.logo {
   letter-spacing: 0.001em;
   font-size: 0.875em;
   color: inherit;
+  display: block;
+  line-height: 1.3;
 }
 
 .offers__item-cta {
@@ -3066,9 +3083,6 @@ a.logo {
 }
 
 @media screen and (max-width: 1050px) {
-  .offers__item-info {
-    display: block;
-  }
   .complexes__inner-content {
     font-size: 14px;
   }
@@ -3178,10 +3192,10 @@ a.logo {
   .product__advantages-list tr td {
     padding-right: 3.2rem;
   }
-  .header__breadcrumbs-list li {
+  .header__breadcrumbs .container > span {
     font-size: 0.6em;
   }
-  .header__breadcrumbs-list li:before {
+  .header__breadcrumbs span.sep {
     margin: 0 0.35rem 0 0.8375em;
   }
   .offers__item-info {
