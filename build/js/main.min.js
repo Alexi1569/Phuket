@@ -8,6 +8,48 @@ jQuery(document).ready(function($) {
 		}
 	})
 
+	if ($('.footer__category-nav').length) {
+		function calculateFooterNav() {
+			var max = 0;
+			var maxWithMargin = 0;
+
+			$('.footer__category-nav').find('li').each(function() {
+				var w = Math.round($(this).outerWidth(), 10);
+				var wWithMargin = Math.round($(this).outerWidth(true), 10);
+
+				if (w > max) {
+					max = w;
+				}
+
+				if (wWithMargin > maxWithMargin) {
+					maxWithMargin = wWithMargin;
+				}
+			});
+
+			$('.footer__category-nav').find('li').each(function() {
+				$(this).css({
+					'width': max + 'px',
+				})
+			});
+
+			console.log(max);
+			console.log(maxWithMargin);
+
+			$('.footer__category-nav').find('ul').css({
+				'width': (maxWithMargin + max) + 'px',
+			})
+		}
+
+		setTimeout(function() {
+			calculateFooterNav();
+		}, 1000);
+
+		$(window).resize(function() {
+			calculateFooterNav();
+		})
+		
+	}
+
 	if ($('.offers__item').length) {
 		function setEqualHeightToOfferItems() {
 			var max = 0;

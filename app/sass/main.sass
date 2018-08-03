@@ -13,6 +13,13 @@ $text: #303030
 	padding: 0
 	box-sizing: border-box
 
+
+.ui-menu-item-wrapper
+	font-size: .7em
+
+.ui-autocomplete
+	box-shadow: 0 0 5px 0 rgba(#000, .3)
+
 #mobile-menu
 	opacity: 0
 	height: 0
@@ -194,6 +201,7 @@ textarea:-moz-placeholder
 
 input[type="submit"]
 	cursor: pointer
+	-webkit-appearance: none
 
 .checkbox
 	vertical-align: top;
@@ -374,6 +382,7 @@ input[type="submit"]
 	background-color: transparent
 	padding: 0 0 0.45rem
 	border: 1px solid $text
+	-webkit-appearance: none
 	height: 1.87500rem
 	transition: 0.3s all ease
 	&:not(.btn--filled):hover
@@ -556,6 +565,41 @@ a.logo
 		transform: translate(-50%, -50%)
 	a
 		color: inherit
+	.header__nav-inner
+		opacity: 0
+		z-index: -1
+		transition: 0.3s all ease
+		position: absolute
+		left: -1px
+		right: -1px
+		top: 100%
+		background-color: #fff
+		padding: 0.625rem 0.75rem
+		min-width: 7.75rem
+		border-top: 1px solid $accent
+		box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.12)
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			bottom: 100%
+			left: 0
+			border: 4px solid transparent
+			border-bottom: 4px solid $accent
+			border-left: 4px solid $accent
+		li
+			margin-bottom: 0.375rem
+			&:hover
+				a
+					color: #333
+			&:last-of-type
+				margin-bottom: 0
+			a
+				display: block
+				font-size: 13px
+				color: #959595
+				transition: 0.3s color ease
+				text-transform: none
 	&__nav
 		width: 50%
 		&.header__nav--left
@@ -569,41 +613,6 @@ a.logo
 				display: inline-block
 		&.header__nav--right
 			padding-left: 8.12500rem
-		&-inner
-			opacity: 0
-			z-index: -1
-			transition: 0.3s all ease
-			position: absolute
-			left: -1px
-			right: -1px
-			top: 100%
-			background-color: #fff
-			padding: 0.625rem 0.75rem
-			min-width: 7.75rem
-			border-top: 1px solid $accent
-			box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.12)
-			&:before
-				content: ''
-				display: block
-				position: absolute
-				bottom: 100%
-				left: 0
-				border: 4px solid transparent
-				border-bottom: 4px solid $accent
-				border-left: 4px solid $accent
-			li
-				margin-bottom: 0.375rem
-				&:hover
-					a
-						color: #333
-				&:last-of-type
-					margin-bottom: 0
-				a
-					display: block
-					font-size: 13px
-					color: #959595
-					transition: 0.3s color ease
-					text-transform: none
 		&-list
 			& > li
 				margin-right: 2.5rem
@@ -862,9 +871,16 @@ a.logo
 	.complexes__inner-content
 		margin-top: 3.12500rem
 
-.rent-page .product__advantages
-	width: 100%
-	margin-top: 3.4375rem
+.rent-page 
+	.product__advantages
+		width: 100%
+		margin-top: 3.4375rem
+		&-list
+			margin-right: -1.25%
+			p
+				flex-basis: 9.5%
+				margin-right: 1.8125%
+
 
 .complexes
 	&__form
@@ -1810,49 +1826,50 @@ a.logo
 		&-wrap
 			position: relative
 	&__advantages
+		width: 45.1754386%
 		&-list
-			width: 100%
-			&--row
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
-				display: flex
-				align-items: flex-start
-				justify-content: space-between
-			tr
-				vertical-align: top
-				td
-					padding-right: 4.4rem
-					&:last-of-type
-						padding-right: 0
-					p
-						font-size: 0.8125em
-						margin-bottom: 0.75rem
-						&:last-of-type
-							margin-bottom: 0
-						&:before
-							content: ''
-							display: inline-block
-							vertical-align: sub
-							margin-right: 0.75rem
-							width: 1rem
-							height: 1rem
-							border-radius: 3px
-							background-position: center
-							background-repeat: no-repeat
-						&.product__advantages-list--true
-							color: $text
-							&:before
-								background-color: #5faf85
-								background-image: url(../img/checked-product-page.svg)
-								background-size: 8px 6px
-						&.product__advantages-list--false
-							color: #969696
-							&:before
-								background-color: #c5c5c5
-								background-image: url(../img/close-product-page.svg)
-								background-size: 6px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-wrap: wrap
+			align-items: stretch
+			justify-content: flex-start
+			p
+				flex-basis: 31%
+				margin-right: 3.5%
+				font-size: 0.8125em
+				margin-bottom: 0.75rem
+				position: relative
+				padding-left: 1.75rem
+				&:nth-child(3n)
+					margin-right: 0
+				&:last-of-type
+					margin-bottom: 0
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					top: 0
+					width: 1rem
+					height: 1rem
+					border-radius: 3px
+					background-position: center
+					background-repeat: no-repeat
+				&.product__advantages-list--true
+					color: $text
+					&:before
+						background-color: #5faf85
+						background-image: url(../img/checked-product-page.svg)
+						background-size: 8px 6px
+				&.product__advantages-list--false
+					color: #969696
+					&:before
+						background-color: #c5c5c5
+						background-image: url(../img/close-product-page.svg)
+						background-size: 6px
 
 	&__top
 		display: -webkit-flex
@@ -2131,10 +2148,20 @@ a.logo
 		text-shadow: 0px 0px 0px $text
 		&-nav
 			ul
-				display: inline-block
-				vertical-align: top
-				&:first-of-type
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: stretch
+				justify-content: flex-start
+				flex-wrap: wrap
+				li
 					margin-right: 5rem
+					&:nth-child(2n)
+						margin-right: 0
+					a
+						display: inline-block
 		a
 			color: $text
 	&__caption
@@ -2272,8 +2299,20 @@ a.logo
 		height: 33rem
 	.complexes__banner
 		min-height: 11.5rem
+	.rent-page .product__advantages-list p
+		flex-basis: 11%
+		margin-right: 1.71428571%
+		&:nth-child(9n)
+			margin-right: 1.71428571%
+		&:nth-child(8n)
+			margin-right: 0
 	.offers__item-share
 		margin-right: 0.5rem
+	.product__advantages
+		font-size: 15px
+	.product__advantages-list p:before
+		width: 0.9rem
+		height: 0.9rem
 	.offers__item-prices
 		font-size: 14px
 	.product__slider .product__slide-img
@@ -2315,6 +2354,17 @@ a.logo
 		z-index: 0
 		transform: none
 		width: 100%
+	.footer__category-nav ul li
+		margin-right: 3rem
+	.rent-page .product__advantages-list p
+		flex-basis: 13%
+		margin-right: 1.5%
+		&:nth-child(9n)
+			margin-right: 1.5%
+		&:nth-child(8n)
+			margin-right: 1.5%
+		&:nth-child(7n)
+			margin-right: 0
 	.rent-page .product__advantages-list--row
 		flex-wrap: wrap
 		td
@@ -2482,8 +2532,6 @@ a.logo
 		margin-top: 1.625rem
 	.footer__follow
 		width: 25%
-	.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type
-		margin-right: 2.2rem
 
 
 @media screen and (max-width: 767px)
@@ -2492,6 +2540,17 @@ a.logo
 	.rent-page .product__details
 		border-bottom: 0
 		padding-bottom: 0
+	.rent-page .product__advantages-list p
+		flex-basis: 18%
+		margin-right: 2.5%
+		&:nth-child(9n)
+			margin-right: 2.5%
+		&:nth-child(8n)
+			margin-right: 2.5%
+		&:nth-child(7n)
+			margin-right: 2.5%
+		&:nth-child(5n)
+			margin-right: 0
 	.rent-page .product__advantages
 		padding-top: 0
 	.product__seasons
@@ -2588,6 +2647,13 @@ a.logo
 		margin: auto
 	.product__cta > .container
 		flex-wrap: wrap
+	.footer__follow
+		width: 100%
+		margin-left: 30%
+		margin-right: 30%
+		margin-top: 1.3rem
+	.footer__content
+		flex-wrap: wrap
 
 
 @media screen and (max-width: 720px)
@@ -2637,8 +2703,6 @@ a.logo
 	.footer__content
 		flex-wrap: wrap
 		justify-content: space-around
-	.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type
-		margin-right: 5rem
 
 
 @media screen and (max-width: 650px)
@@ -2646,7 +2710,8 @@ a.logo
 		display: none
 	.header__hamburger
 		display: block
-
+	.footer__category-nav ul li
+		margin-right: 1.5rem
 	.header__bottom
 		padding: 1rem 0
 		justify-content: flex-start
@@ -2683,11 +2748,10 @@ a.logo
 @media screen and (max-width: 600px)
 	.footer__follow
 		width: 80%
+		margin-left: auto
+		margin-right: auto
 	.offers__content
 		width: 60%
-	.footer__time-nav ul:first-of-type, .footer__category-nav ul:first-of-type
-		margin-right: 2rem
-
 	.arrow.arrow--prev-gallery
 		left: 14%
 	.arrow.arrow--next-gallery
@@ -2736,6 +2800,19 @@ a.logo
 	.header__modal-group
 		width: 100%
 		margin-bottom: 0.9rem
+	.rent-page .product__advantages-list p
+		flex-basis: 30%
+		margin-right: 5%
+		&:nth-child(9n)
+			margin-right: 5%
+		&:nth-child(8n)
+			margin-right: 5%
+		&:nth-child(7n)
+			margin-right: 5%
+		&:nth-child(5n)
+			margin-right: 5%
+		&:nth-child(3n)
+			margin-right: 0
 	.modal.header__modal
 		padding-top: 2.2rem
 		padding-bottom: 2.2rem
@@ -2886,6 +2963,8 @@ a.logo
 	.complexes .slick-slide,
 	.complexes .slick-list
 		margin: 0
+	.product__advantages-list p
+		padding-left: 1.5rem
 	.reviews__slide-inner
 		width: 100%
 	.reviews__slide-img
