@@ -13,12 +13,28 @@ $text: #303030
 	padding: 0
 	box-sizing: border-box
 
+.map-section
+	overflow: hidden
+	margin-bottom: -4.37500rem
 
 .ui-menu-item-wrapper
 	font-size: .7em
 
 .ui-autocomplete
 	box-shadow: 0 0 5px 0 rgba(#000, .3)
+
+label
+	display: block
+
+.cf7-smart-grid.has-grid .wpcf7-submit
+	background-color: #3b7893 !important
+	color: #fff !important
+	border: 0 !important
+	border-radius: 0.625rem !important
+	font-weight: normal !important
+	font-size: 11px !important
+	width: auto !important
+	min-height: auto !important
 
 #mobile-menu
 	opacity: 0
@@ -118,7 +134,11 @@ div.wpcf7 .ajax-loader
 			width: 100%
 		& > p > label
 			font-size: 0
-			
+
+.wpcf7-form-control-wrap
+	display: block !important	
+
+
 #page
 	min-height: 100vh
 
@@ -288,8 +308,12 @@ input[type="submit"]
 .complexes__banner h1
 	margin: 0 1rem
 
+.wpcf7-form-control-wrap
+	width: 100% !important
+
 .form
 	&__group	
+		display: block
 		text-align: left
 		input:not([type="submit"]),
 		textarea
@@ -380,7 +404,7 @@ input[type="submit"]
 	border-radius: 0.625rem
 	line-height: 2rem
 	background-color: transparent
-	padding: 0 0 0.45rem
+	padding: 0 0.5rem 0.45rem 0.5rem
 	border: 1px solid $text
 	-webkit-appearance: none
 	height: 1.87500rem
@@ -522,11 +546,18 @@ a.logo
 			font-size: 14px
 			margin-bottom: 2rem
 	&__video
-		background-position: center
-		background-size: cover
-		background-repeat: no-repeat
+		overflow: hidden
 		height: 38.12500rem
 		position: relative
+		video
+			left: 0
+			position: absolute
+			top: 0
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			height: auto
 		& > .container
 			position: relative
 			height: 100%
@@ -883,6 +914,8 @@ a.logo
 
 
 .complexes
+	.slick-list > .slick-track
+		margin-left: 0
 	&__form
 		margin-top: 2.8125rem
 	&__map
@@ -1151,11 +1184,9 @@ a.logo
 			font-size: 0.9375em
 			&.offers__item-price--day
 				&:after
-					content: '/day'
 					font-family: $reg
 			&.offers__item-price--month
 				&:after
-					content: '/month'
 					font-family: $reg
 			&--share
 				font-family: $light
@@ -1453,6 +1484,8 @@ a.logo
 		padding-right: 0
 
 .product
+	&__locations
+		margin-top: 2.5rem
 	&__calendar
 		width: 32.0175439%
 		.daterangepicker
@@ -1630,6 +1663,7 @@ a.logo
 					justify-content: space-between
 					textarea
 						flex: 1
+						height: 10.35rem
 		& > .container
 			display: -webkit-flex
 			display: -moz-flex
@@ -1672,7 +1706,7 @@ a.logo
 				&-right
 					width: 54.5%
 					textarea
-						height: 86%
+						height: 9.8rem
 						max-height: 100%
 						max-width: 100%
 						overflow-y: hidden
@@ -1683,13 +1717,17 @@ a.logo
 				display: -o-flex
 				display: flex
 				align-items: stretch
-				justify-content: space-between
+				justify-content: space-between		
+				.form__group:first-child
+					width: 40%
+				.form__group:last-child
+					width: 54.5%
 			.form__group-label
 				margin-bottom: 0.3rem
 			.form__group
-				&:first-child
+				& > *:first-child
 					width: 40%
-				&:last-child
+				& > *:last-child
 					width: 54.5%
 	&__video
 		height: 0
@@ -1705,8 +1743,8 @@ a.logo
 			height: 100%
 	&__map
 		margin-top: 4.37500rem
-		& > .container
-			height: 18.12500rem
+		overflow: hidden
+
 		iframe
 			width: 100%
 			height: 100%
@@ -1753,7 +1791,6 @@ a.logo
 					sup
 						font-size: 0.7em
 	&__seasons
-		width: 24.5614035%
 		margin-right: 3.50877193%
 		&-list
 			width: 100%
@@ -1839,6 +1876,7 @@ a.logo
 			p
 				flex-basis: 31%
 				margin-right: 3.5%
+				line-height: 1.15
 				font-size: 0.8125em
 				margin-bottom: 0.75rem
 				position: relative
@@ -2006,6 +2044,8 @@ a.logo
 
 
 .articles
+	.slick-list > .slick-track
+		margin-left: 0
 	.slick-list
 		margin: 0 -0.75rem
 	.slick-slide
@@ -2297,6 +2337,10 @@ a.logo
 @media screen and (max-width: 1199px)
 	.header__video
 		height: 33rem
+	.header__nav-list a
+		font-size: 11px
+	.header__nav-list > li
+		margin-right: 2.1rem
 	.complexes__banner
 		min-height: 11.5rem
 	.rent-page .product__advantages-list p
@@ -2348,6 +2392,10 @@ a.logo
 @media screen and (max-width: 991px)
 	.header__video
 		height: 28rem
+	.header__nav-list a
+		font-size: 10px
+	.header__nav-list > li
+		margin-right: 1.8rem
 	.offers__item .offers__item-address, .offers__item .offers__item-characteristics
 		opacity: 1
 		position: initial
@@ -2553,9 +2601,8 @@ a.logo
 			margin-right: 0
 	.rent-page .product__advantages
 		padding-top: 0
+
 	.product__seasons
-		width: 40%
-		flex-basis: 40%
 		margin-right: 0
 	.product__calendar
 		margin-top: 1.5rem
@@ -2623,10 +2670,10 @@ a.logo
 		width: 100%
 	.banner
 		min-height: 20rem
-	.product__details
-		width: 100%
-		padding-bottom: 1.5rem
-		border-bottom: 1px solid #eeeeee
+	.product__info > .container
+		justify-content: space-around
+	.rent-page .product__details
+		flex: 0
 	.product__slider .product__slide-img
 		width: 23rem
 	.product__previews .product__slide-img
@@ -2659,10 +2706,6 @@ a.logo
 @media screen and (max-width: 720px)
 	a.logo
 		font-size: 1.2em
-	.header__nav-list > li
-		margin-right: 1.8rem
-	.header__nav-list a
-		font-size: 11px
 	.section--margin-top
 		margin-top: 2.5rem
 	.reviews__slide-inner
@@ -2703,18 +2746,18 @@ a.logo
 	.footer__content
 		flex-wrap: wrap
 		justify-content: space-around
-
-
-@media screen and (max-width: 650px)
 	.header__nav
 		display: none
 	.header__hamburger
 		display: block
-	.footer__category-nav ul li
-		margin-right: 1.5rem
 	.header__bottom
 		padding: 1rem 0
 		justify-content: flex-start
+
+
+@media screen and (max-width: 650px)
+	.footer__category-nav ul li
+		margin-right: 1.5rem
 	.help-form__form .form__group
 		width: 31%
 		margin: 0 1.16666667%
@@ -2740,6 +2783,9 @@ a.logo
 
 
 @media screen and (max-width: 620px)
+	.header__video video
+		height: 100%
+		width: auto
 	.product__slider .product__slide-img
 		width: 18rem
 	.product__previews .product__slide-img
@@ -2750,6 +2796,11 @@ a.logo
 		width: 80%
 		margin-left: auto
 		margin-right: auto
+	.product__reservation-bottom input[type="submit"]
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
 	.offers__content
 		width: 60%
 	.arrow.arrow--prev-gallery
@@ -2775,11 +2826,7 @@ a.logo
 		display: flex
 		align-items: stretch
 		justify-content: space-between
-	.product__form-submit
-		position: absolute
-		left: 0
-		bottom: 0
-		right: 0
+
 	.product__reservation-bottom
 		position: relative
 		padding-bottom: 3rem
@@ -2856,10 +2903,9 @@ a.logo
 		justify-content: center
 	.product__info > .container
 		flex-direction: column
-		align-items: stretch
+		align-items: center
 		justify-content: flex-start
 	.product__details,
-	.product__seasons,
 	.product__calendar
 		width: 100%
 		display: -webkit-flex
@@ -2869,6 +2915,9 @@ a.logo
 		display: flex
 		flex-direction: column
 		align-items: center
+
+	.product__details
+		margin-right: 0
 
 	.rent-page .product__details
 		margin-right: 0
@@ -2967,6 +3016,18 @@ a.logo
 		padding-left: 1.5rem
 	.reviews__slide-inner
 		width: 100%
+	.product__advantages-list p,
+	.rent-page .product__advantages-list p
+		flex-basis: 46%
+		margin-right: 8%
+		&:nth-child(2n)
+			margin-right: 0 !important
+		&:nth-child(3n),
+		&:nth-child(5n),
+		&:nth-child(6n),
+		&:nth-child(7n),
+		&:nth-child(8n)
+			margin-right: 8%
 	.reviews__slide-img
 		margin-top: 1.5rem
 	.rent__item
@@ -2981,7 +3042,7 @@ a.logo
 		padding-top: 4.4rem
 	.product__form
 		position: relative
-		padding-bottom: 4.6rem
+		padding-bottom: 3.2rem
 	.product__video
 		width: 100%
 		padding-bottom: 56.25%
