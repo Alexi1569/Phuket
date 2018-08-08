@@ -2,6 +2,13 @@
 jQuery(document).ready(function ($) {
     var w = $(window).outerWidth();
 
+    if ($('#comments-rating').length) {
+        var parent = $('#comments-rating').closest('#commentform');
+        var rating = $('#comments-rating').remove();
+
+        $(parent).find('.product__reviews-add-rating').append(rating);
+    }
+
     if ($('#video').length) {
         var video = document.getElementById('video');
         setTimeout(function() {
@@ -148,6 +155,10 @@ jQuery(document).ready(function ($) {
     if ($('#js-product-slider').length) {
 
         var $productsSlider = $('#js-product-slider');
+
+        $productsSlider.on('init', function(event, slick) {
+            $('.product__gallery').addClass('active');
+        });
 
         $productsSlider.slick({
             slidesToShow: 1,

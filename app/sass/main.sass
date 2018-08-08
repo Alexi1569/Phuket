@@ -23,6 +23,88 @@ $text: #303030
 .ui-autocomplete
 	box-shadow: 0 0 5px 0 rgba(#000, .3)
 
+.comments-rating
+  border: none
+  padding: 0
+  margin-left: 0
+  label
+    display: inline-block
+
+.product__reviews-add-rating
+	margin-top: 0.5rem
+
+.rating-container
+  font-size: 0
+  *
+    font-size: 1.2rem
+  >
+    input
+      display: none
+      + label
+        font-family: 'dashicons'
+        display: inline-block
+        overflow: hidden
+        text-indent: 9999px
+        width: 1em
+        white-space: nowrap
+        cursor: pointer
+        margin: 0
+        &:before
+          display: inline-block
+          text-indent: -9999px
+          content: "\f154"
+          color: #fdd331
+      &:checked ~ label:before
+        content: "\f155"
+        color: #fdd331
+        text-shadow: 0 0 1px #333
+      + label:hover
+        ~ label:before, &:before
+          content: "\f155"
+          color: #fdd331
+          text-shadow: 0 0 1px #333
+    .star-cb-clear + label
+      text-indent: -9999px
+      width: .5em
+      margin-left: -.5em
+      &:before
+        width: .5em
+  &:hover > input + label
+    &:before
+      content: "\f154"
+      color: #fdd331
+      text-shadow: none
+    &:hover
+      ~ label:before, &:before
+        content: "\f155"
+        color: #fdd331
+        text-shadow: 0 0 1px #333
+
+.comment-respond .rating-container >
+  .star-cb-clear + label
+    text-indent: 9999px
+  input + label
+    &:before
+      text-indent: 9999px
+    text-indent: -9999px
+
+.product__reviews-item-rating
+	line-height: 0
+	margin-top: 0.25rem
+
+.product__reviews-item .product__reviews-item-content .product__reviews-item-rating .stars
+  color: #fdd331
+  span
+    font-size: 0.8rem
+
+.rating-container 
+	display: inline-block
+	direction: rtl
+
+.dashicons, .dashicons-before:before
+	width: auto !important
+	height: auto !important
+
 label
 	display: block
 
@@ -921,7 +1003,6 @@ a.logo
 	&__map
 		margin-top: 2.8125rem
 		& > .container
-			height: 18.12500rem
 			iframe
 				width: 100%
 				height: 100%
@@ -1329,7 +1410,6 @@ a.logo
 		justify-content: space-between
 	&__map
 		width: 57.2807018%
-		height: 33.5rem
 		iframe
 			height: 100%
 			width: 100%
@@ -1844,6 +1924,10 @@ a.logo
 		width: auto
 		margin: 3rem auto 0
 		position: relative
+		opacity: 0
+		transition: 0.15s all ease-in
+		&.active
+			opacity: 1
 		img
 			max-width: 100%
 			display: block
@@ -2634,8 +2718,6 @@ a.logo
 		padding-right: 0%
 	.contacts-inner__content
 		font-size: 14px
-	.contacts-inner__map
-		height: 30rem
 	.product__reservation > .container
 		flex-wrap: wrap
 	.product__reservation-cta,
@@ -2877,7 +2959,6 @@ a.logo
 	.contacts-inner__content
 		flex-direction: column
 	.contacts-inner__map
-		height: 20rem
 		width: 100%
 		margin-bottom: 2rem
 	.contacts-inner__info
