@@ -268,7 +268,7 @@ jQuery(document).ready(function ($) {
 
     if ($('#js-select-date').length) {
         if (typeof calendar !== 'undefined' && calendar !== 'false' ) {
-            let myCalendar = JSON.parse(calendar);
+            var myCalendar = JSON.parse(calendar);
 
             var dates = [];
             myCalendar.forEach(function (element, i) {
@@ -316,7 +316,7 @@ jQuery(document).ready(function ($) {
 
         if (typeof calendar !== 'undefined' && calendar !== 'false' ) {
 
-            let myCalendar = JSON.parse(calendar);
+            var myCalendar = JSON.parse(calendar);
 
             var dates = [];
             myCalendar.forEach(function (element, i) {
