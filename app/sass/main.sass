@@ -68,13 +68,15 @@ div.wpcf7-response-output
 	display: -ms-flex
 	display: -o-flex
 	display: flex
-	align-items: end
+	align-items: flex-end
+	flex-direction: column
 	justify-content: flex-end
 	font-size: .75em
 	color: #3b7893
 	margin-top: 1.2rem
 	img
-		margin-left: 1.3rem
+		display: block
+		margin-top: 0.3rem
 
 .mm-menu_offcanvas
 	z-index: 4 !important
@@ -443,6 +445,10 @@ input[type="submit"]
 	&__group	
 		display: block
 		text-align: left
+		&.form__group--white
+			input:not([type="submit"]),
+			textarea
+				border-color: transparent
 		input:not([type="submit"]),
 		textarea
 			background-color: #fff
@@ -551,10 +557,13 @@ input[type="submit"]
 		display: inline-block
 
 a.logo
-	font-family: $bold
-	text-transform: uppercase
-	font-size: 1.62500em
-	line-height: 1
+	width: 5.7rem
+	display: inline-block
+	img
+		max-width: 100%
+		display: block
+		height: auto
+		margin: auto
 
 .modal.header__modal
 	padding: 2.5rem 1.87500rem
@@ -645,6 +654,7 @@ a.logo
 		font-size: 10px
 		padding-left: 1.29rem
 		padding-right: 1.29rem
+		text-shadow: 0 0 0 rgba(#303030, .7)
 	&__modal
 		letter-spacing: 0.025em
 		&-submit
@@ -1181,6 +1191,20 @@ a.logo
 .product__calendar
 	.daterangepicker 
 		position: initial
+
+.touch-device
+	.offers__item
+		.offers__item-address,
+		.offers__item-characteristics
+			width: auto
+			opacity: 1
+			position: initial
+			z-index: 0
+			transform: translateX(0%)
+		&:hover
+			box-shadow: none
+			.offers__item-img img
+				margin-top: 0
 
 .offers
 	&__content
@@ -2328,11 +2352,11 @@ a.logo
 				display: flex
 				align-items: stretch
 				justify-content: flex-start
-				flex-wrap: wrap
+				flex-direction: column
 				li
-					margin-right: 5rem
-					&:nth-child(2n)
-						margin-right: 0
+					margin-bottom: 0.3rem
+					&:last-of-type
+						margin-bottom: 0
 					a
 						display: inline-block
 		a
@@ -2518,20 +2542,10 @@ a.logo
 @media screen and (max-width: 991px)
 	.header__video
 		height: 28rem
-	.offers__item:hover
-		box-shadow: none 
-		.offers__item-img img
-			margin-top: 0
 	.header__nav-list a
 		font-size: 10px
 	.header__nav-list > li
 		margin-right: 1.8rem
-	.offers__item .offers__item-address, .offers__item .offers__item-characteristics
-		opacity: 1
-		position: initial
-		z-index: 0
-		transform: none
-		width: 100%
 	.footer__category-nav ul li
 		margin-right: 3rem
 	.product__advantages.product__advantages--width 
@@ -2710,6 +2724,11 @@ a.logo
 	.rent-page .product__details
 		border-bottom: 0
 		padding-bottom: 0
+	.footer__develop
+		justify-content: center
+		align-items: center
+	a.logo
+		width: 4.5rem
 	.rent-page .product__advantages
 		padding-top: 0
 	.footer__develop
@@ -3000,6 +3019,7 @@ a.logo
 	.articles__slider,
 	.complexes__slider
 		padding-right: 3rem
+
 	.header__video
 		height: 12rem
 	.villas-page__sorts
