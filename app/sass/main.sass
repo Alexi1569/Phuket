@@ -68,15 +68,13 @@ div.wpcf7-response-output
 	display: -ms-flex
 	display: -o-flex
 	display: flex
-	align-items: flex-end
-	flex-direction: column
-	justify-content: flex-end
+	align-items: end
+	justify-content: flex-start
 	font-size: .75em
-	color: #3b7893
+	color: #333
 	margin-top: 1.2rem
 	img
-		display: block
-		margin-top: 0.3rem
+		margin-left: 0.7rem
 
 .mm-menu_offcanvas
 	z-index: 4 !important
@@ -445,10 +443,6 @@ input[type="submit"]
 	&__group	
 		display: block
 		text-align: left
-		&.form__group--white
-			input:not([type="submit"]),
-			textarea
-				border-color: transparent
 		input:not([type="submit"]),
 		textarea
 			background-color: #fff
@@ -735,7 +729,7 @@ a.logo
 		position: absolute
 		left: 50%
 		top: 50%
-		transform: translate(-50%, -50%)
+		transform: translate(-50%, -65%)
 	a
 		color: inherit
 	.header__nav-inner
@@ -2048,6 +2042,7 @@ a.logo
 					position: absolute
 					left: 0
 					top: 0
+					transform: translateY(-12%)
 					width: 1rem
 					height: 1rem
 					border-radius: 3px
@@ -2366,7 +2361,7 @@ a.logo
 		font-family: $bold
 		margin-bottom: 0.75rem
 	&__follow
-		width: 17.1052632%
+		width: 20%
 		&-btn
 			margin-top: 0.625rem
 			&:hover
@@ -2851,6 +2846,8 @@ a.logo
 		left: -27rem
 		transform: none
 		top: -16%
+	.header .logo
+		transform: translate(-50%, -50%)
 	.offers__item
 		width: 100%
 		margin-left: 0

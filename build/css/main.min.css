@@ -157,30 +157,22 @@ div.wpcf7-response-output {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
+  -webkit-align-items: end;
   -moz-box-align: end;
   -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  align-items: end;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   font-size: .75em;
-  color: #3b7893;
+  color: #333;
   margin-top: 1.2rem;
 }
 
 .footer__develop img {
-  display: block;
-  margin-top: 0.3rem;
+  margin-left: 0.7rem;
 }
 
 .mm-menu_offcanvas {
@@ -680,11 +672,6 @@ input[type="submit"] {
   text-align: left;
 }
 
-.form__group.form__group--white input:not([type="submit"]),
-.form__group.form__group--white textarea {
-  border-color: transparent;
-}
-
 .form__group input:not([type="submit"]),
 .form__group textarea {
   background-color: #fff;
@@ -1147,11 +1134,11 @@ a.logo img {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -65%);
+  -moz-transform: translate(-50%, -65%);
+  -ms-transform: translate(-50%, -65%);
+  -o-transform: translate(-50%, -65%);
+  transform: translate(-50%, -65%);
 }
 
 .header a {
@@ -3565,6 +3552,11 @@ a.logo img {
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-transform: translateY(-12%);
+  -moz-transform: translateY(-12%);
+  -ms-transform: translateY(-12%);
+  -o-transform: translateY(-12%);
+  transform: translateY(-12%);
   width: 1rem;
   height: 1rem;
   -webkit-border-radius: 3px;
@@ -4133,7 +4125,7 @@ a.logo img {
 }
 
 .footer__follow {
-  width: 17.1052632%;
+  width: 20%;
 }
 
 .footer__follow-btn {
@@ -4914,6 +4906,13 @@ a.logo img {
     -o-transform: none;
     transform: none;
     top: -16%;
+  }
+  .header .logo {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   .offers__item {
     width: 100%;
