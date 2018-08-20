@@ -2777,6 +2777,16 @@ a.logo img {
   margin-top: 2.62500rem;
 }
 
+.product__descr-title {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 0.8rem;
+}
+
+.product__descr .container--text {
+  column-count: 2;
+}
+
 .product__descr p {
   font-size: 0.8125em;
   line-height: 1.69230769;
@@ -4201,6 +4211,9 @@ a.logo img {
   .complexes .slick-slide,
   .complexes .slick-list {
     margin: 0;
+  }
+  .product__descr .container--text {
+    column-count: 1;
   }
   .product__advantages-list p {
     padding-left: 1.5rem;

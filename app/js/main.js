@@ -78,9 +78,11 @@ jQuery(document).ready(function ($) {
 
         setTimeout(function() {
             setEqualHeightToOfferItems();
+            rentPageFooter();
         }, 500)
         $(window).resize(function() {
             setEqualHeightToOfferItems();
+            rentPageFooter();
         })
     }
 
@@ -102,7 +104,6 @@ jQuery(document).ready(function ($) {
 
     $(window).resize(function () {
         w = $(window).outerWidth();
-        rentPageFooter();
     });
 
     $('#js-header-search-toggle').click(function (e) {
