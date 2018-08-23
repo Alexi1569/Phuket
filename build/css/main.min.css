@@ -5377,21 +5377,27 @@ a.logo img {
   .complexes .slick-list {
     margin: 0;
   }
+  .product__descr .container--text {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
   .product__advantages-list p {
     padding-left: 1.5rem;
   }
   .reviews__slide-inner {
     width: 100%;
   }
-  .product__advantages-list p .product__advantages-list,
-  .product__advantages.product__advantages--width .product__advantages-list {
+  .product__advantages-list {
     margin-right: -2%;
   }
-  .product__advantages-list p .product__advantages-list p,
-  .product__advantages.product__advantages--width .product__advantages-list p {
+  .product__advantages-list p {
     -webkit-flex-basis: 48%;
     -ms-flex-preferred-size: 48%;
     flex-basis: 48%;
+    margin-right: 2%;
+  }
+  .product__advantages-list p:nth-child(3n) {
     margin-right: 2%;
   }
   .reviews__slide-img {

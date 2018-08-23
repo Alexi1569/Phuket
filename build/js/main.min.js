@@ -234,9 +234,11 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    $('.styled-select').SumoSelect({
-        floatWidth: 250,
-        nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
+    $('.styled-select').each(function() {
+        $(this).SumoSelect({
+            floatWidth: 250,
+            nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
+        });
     })
 
     if ($('#js-select-date').length) {
