@@ -442,7 +442,6 @@ input[type="submit"] {
 }
 
 .daterangepicker.show-calendar .drp-buttons {
-  display: flex !important;
   align-items: center;
   justify-content: flex-end;
 }
@@ -539,9 +538,65 @@ input[type="submit"] {
   width: 100% !important;
 }
 
+.ui-menu {
+  background-color: #fff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+  margin: 0 !important;
+}
+
+.ui-menu-item {
+  padding: 0.2rem 0.1rem;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.ui-menu-item:last-child {
+  border-bottom: 0;
+}
+
+.ui-state-disabled > div {
+  color: #969696;
+}
+
+.disabled-input {
+  pointer-events: none;
+  opacity: .5;
+}
+
 .form__group {
   display: block;
   text-align: left;
+}
+
+.form__group .ui-button .ui-icon {
+  background: url(../img/header-language-arrow.svg) no-repeat center;
+  transform: rotate(-90deg);
+  margin-top: 0.25rem;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 8px;
+  height: 8px;
+}
+
+.form__group span[aria-autocomplete="list"] {
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 0 !important;
+}
+
+.form__group span[aria-autocomplete="list"]:focus {
+  outline: 0;
+}
+
+.form__group .ui-selectmenu-text {
+  font-size: 0.8125em;
+  font-family: "Circe reg";
+  letter-spacing: 0.005em;
 }
 
 .form__group input:not([type="submit"]),
@@ -550,48 +605,6 @@ input[type="submit"] {
   border: 1px solid #c5c5c5;
   width: 100%;
   padding: 0.355rem 0.625rem;
-}
-
-.form__group .SumoSelect {
-  width: 100%;
-}
-
-.form__group .SumoSelect > .optWrapper > .options,
-.form__group .SumoSelect > .optWrapper > .options > li.opt:first-child,
-.form__group .SumoSelect > .optWrapper > .options > li.opt:last-child,
-.form__group .SumoSelect > .optWrapper {
-  border-radius: 0;
-}
-
-.form__group .SumoSelect > .CaptionCont > label {
-  cursor: pointer;
-}
-
-.form__group .SumoSelect > .CaptionCont > label i {
-  background: url(../img/header-language-arrow.svg) no-repeat center;
-  background-size: cover;
-  width: 8px;
-  height: 8px;
-  transform: rotate(-90deg);
-  transition: 0.3s transform ease;
-}
-
-.form__group .SumoSelect .select-all > label, .form__group .SumoSelect > .CaptionCont, .form__group .SumoSelect > .optWrapper > .options li.opt label {
-  font-size: 11px;
-}
-
-.form__group .SumoSelect > .CaptionCont, .form__group .SumoSelect.open > .CaptionCont, .form__group .SumoSelect:focus > .CaptionCont, .form__group .SumoSelect:hover > .CaptionCont {
-  color: #333;
-  height: 30px;
-  border: 1px solid #c5c5c5;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span {
-  font-size: 13px;
-  font-family: "Circe reg";
-  line-height: 20px;
 }
 
 .form__group-label {
@@ -653,6 +666,14 @@ input[type="submit"] {
   margin-top: 3.12500rem;
 }
 
+a, button, input, textarea {
+  -webkit-appearance: none !important;
+}
+
+input:not([type="submit"]) {
+  border-radius: 0 !important;
+}
+
 .btn {
   display: block;
   font-size: 11px;
@@ -664,7 +685,6 @@ input[type="submit"] {
   background-color: transparent;
   padding: 0 0.5rem 0.45rem 0.5rem;
   border: 1px solid #303030;
-  -webkit-appearance: none;
   height: 1.87500rem;
   transition: 0.3s all ease;
 }
@@ -848,13 +868,6 @@ a.logo img {
 .header__modal-group {
   width: 48.8888889%;
   margin-bottom: 1.25rem;
-}
-
-.header__modal-group .SumoSelect > .CaptionCont > span, .header__modal-group .SumoSelect.open > .CaptionCont > span, .header__modal-group .SumoSelect:focus > .CaptionCont > span, .header__modal-group .SumoSelect:hover > .CaptionCont > span {
-  font-size: 11px;
-  line-height: 20px;
-  font-family: "Circe light";
-  text-shadow: 0px 0px 0px #303030;
 }
 
 .header__modal-label {
@@ -2109,6 +2122,11 @@ a.logo img {
   width: 8.33333333%;
 }
 
+.daterangepicker:after,
+.daterangepicker:before {
+  display: none !important;
+}
+
 .rent-page .product__details {
   flex: 1;
   margin-right: 4.56140351%;
@@ -2116,6 +2134,17 @@ a.logo img {
 
 .rent-page .product__advantages-list tr td {
   padding-right: 0;
+}
+
+.form__group--date-wrap {
+  position: relative;
+}
+
+.form__group--date-wrap .daterangepicker {
+  left: 0 !important;
+  right: auto  !important;
+  align-items: center;
+  min-width: 486px;
 }
 
 .product__locations {
@@ -3299,25 +3328,6 @@ a.logo img {
   margin-bottom: 3px;
 }
 
-.villas__filter .SumoSelect > .CaptionCont > label > i {
-  top: 2px;
-}
-
-.villas__filter .form__group .SumoSelect > .CaptionCont > label i {
-  width: 7px;
-  height: 11px;
-}
-
-.villas__filter .form__group .SumoSelect > .CaptionCont, .villas__filter .form__group .SumoSelect.open > .CaptionCont, .villas__filter .form__group .SumoSelect:focus > .CaptionCont, .villas__filter .form__group .SumoSelect:hover > .CaptionCont {
-  height: 30px;
-  line-height: 30px;
-}
-
-.villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span {
-  line-height: 19px;
-  font-size: 13px;
-}
-
 .villas__filter-form .form__group-content {
   display: -webkit-flex;
   display: -moz-flex;
@@ -3471,12 +3481,6 @@ a.logo img {
   .contacts-inner__info {
     padding-right: 4%;
   }
-  .form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span {
-    font-size: 11px;
-  }
-  .product__reservation-cta .SumoSelect > .CaptionCont > span {
-    padding-right: 24px;
-  }
   .product__reservation-cta {
     width: 77%;
   }
@@ -3602,10 +3606,6 @@ a.logo img {
   }
   .header__phone {
     margin-right: 1.5rem;
-  }
-  .villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span {
-    font-size: 11px;
-    line-height: 20px;
   }
 }
 

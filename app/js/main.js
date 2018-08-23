@@ -1,6 +1,14 @@
 ;
 jQuery(document).ready(function ($) {
 
+    $('#js-select-date').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+    });
+
+    $('#js-select-date').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
     if ("ontouchstart" in document.documentElement) {
         $('body').addClass('touch-device');
     } else {
@@ -45,6 +53,27 @@ jQuery(document).ready(function ($) {
         })
     }, 1000);
 
+
+
+
+    (function triggerFilterState() {
+
+        function trigger() {
+            var beachValue = $('#js-select-beach').val();
+            if (!beachValue) {
+                $('input[name="user_complex"]').addClass('disabled-input')
+            } else {
+                $('input[name="user_complex"]').removeClass('disabled-input')
+            }
+        }
+
+        trigger();
+
+        $('#js-select-beach').on('selectmenuchange', function() {
+            trigger();
+        });
+   
+    })();
 
 
     $(document).click(function(e) {
@@ -117,13 +146,6 @@ jQuery(document).ready(function ($) {
         }
 
     });
-
-    if ($('#js-select-day').length) {
-        $('#js-select-day').SumoSelect({
-            floatWidth: 250,
-            nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
-        });
-    }
 
     if ($('#js-product-slider').length) {
 
@@ -235,10 +257,7 @@ jQuery(document).ready(function ($) {
     }
 
     $('.styled-select').each(function() {
-        $(this).SumoSelect({
-            floatWidth: 250,
-            nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
-        });
+        $(this).selectmenu();
     })
 
     if ($('#js-select-date').length) {
@@ -257,6 +276,7 @@ jQuery(document).ready(function ($) {
                 opens: 'left',
                 startDate: moment(),
                 endDate: moment().add(5, 'days'),
+                parentEl: '.data-choose',
                 locale: {
                     format: 'DD-MM-YYYY',
                 },
@@ -278,9 +298,10 @@ jQuery(document).ready(function ($) {
                 opens: 'left',
                 startDate: moment(),
                 endDate: moment().add(5, 'days'),
+                parentEl: '.data-choose',
                 locale: {
                     format: 'DD-MM-YYYY',
-                }
+                },
             });
         }
 

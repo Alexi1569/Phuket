@@ -361,7 +361,6 @@ input[type="submit"]
 	cursor: pointer;
 
 .daterangepicker.show-calendar .drp-buttons
-	display: flex !important
 	align-items: center
 	justify-content: flex-end
 	.drp-selected
@@ -439,8 +438,51 @@ input[type="submit"]
 .wpcf7-form-control-wrap
 	width: 100% !important
 
+.ui-menu
+	background-color: #fff
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25)
+
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active
+	margin: 0 !important
+
+.ui-menu-item
+	padding: 0.2rem 0.1rem
+	border-bottom: 1px solid #d4d4d4
+	&:last-child
+		border-bottom: 0
+
+.ui-state-disabled > div
+	color: #969696
+
+.disabled-input
+	pointer-events: none
+	opacity: .5
+
+
 .form
-	&__group	
+	&__group
+		
+		.ui-button .ui-icon
+			background: url(../img/header-language-arrow.svg) no-repeat center
+			transform: rotate(-90deg)
+			margin-top: 0.25rem
+			-moz-background-size: cover
+			background-size: cover
+			width: 8px
+			height: 8px
+		span[aria-autocomplete="list"]
+			display: block
+			height: 30px
+			width: 100%
+			background-color: #fff
+			border: 1px solid #c6c6c6
+			border-radius: 0 !important
+			&:focus
+				outline: 0
+		.ui-selectmenu-text
+			font-size: 0.8125em
+			font-family: $reg
+			letter-spacing: 0.005em
 		display: block
 		text-align: left
 		input:not([type="submit"]),
@@ -449,34 +491,6 @@ input[type="submit"]
 			border: 1px solid #c5c5c5
 			width: 100%
 			padding: 0.355rem 0.625rem
-		.SumoSelect
-			width: 100%
-		.SumoSelect>.optWrapper>.options,
-		.SumoSelect>.optWrapper>.options>li.opt:first-child,
-		.SumoSelect>.optWrapper>.options>li.opt:last-child,
-		.SumoSelect>.optWrapper
-			border-radius: 0
-		.SumoSelect>.CaptionCont>label
-			cursor: pointer
-			i
-				background: url(../img/header-language-arrow.svg) no-repeat center
-				background-size: cover
-				width: 8px
-				height: 8px
-				transform: rotate(-90deg)
-				transition: 0.3s transform ease
-		.SumoSelect .select-all>label, .SumoSelect>.CaptionCont, .SumoSelect>.optWrapper>.options li.opt label
-			font-size: 11px
-		.SumoSelect>.CaptionCont, .SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont
-			color: #333
-			height: 30px
-			border: 1px solid #c5c5c5
-			border-radius: 0
-			box-shadow: none
-			& > span
-				font-size: 13px
-				font-family: $reg
-				line-height: 20px
 		&-label
 			font-size: 11px
 			text-transform: uppercase
@@ -523,6 +537,12 @@ input[type="submit"]
 .section--margin-top
 	margin-top: 3.12500rem
 
+a, button, input, textarea
+	-webkit-appearance: none !important
+
+input:not([type="submit"])
+	border-radius: 0 !important
+
 .btn
 	display: block
 	font-size: 11px
@@ -534,7 +554,6 @@ input[type="submit"]
 	background-color: transparent
 	padding: 0 0.5rem 0.45rem 0.5rem
 	border: 1px solid $text
-	-webkit-appearance: none
 	height: 1.87500rem
 	transition: 0.3s all ease
 	&:not(.btn--filled):hover
@@ -663,12 +682,7 @@ a.logo
 		&-group
 			width: 48.8888889%
 			margin-bottom: 1.25rem
-			.SumoSelect>.CaptionCont, .SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont
-				& > span
-					font-size: 11px
-					line-height: 20px
-					font-family: $light
-					text-shadow: 0px 0px 0px $text
+			
 		&-label
 			font-size: 10px
 			margin-bottom: 3px
@@ -1615,12 +1629,25 @@ a.logo
 .product__filter-wrapper .form__group--rooms
 	width: 8.33333333%
 
+.daterangepicker:after,
+.daterangepicker:before
+	display: none !important
+
 .rent-page 
 	.product__details
 		flex: 1
 		margin-right: 4.56140351%
 	.product__advantages-list tr td
 		padding-right: 0
+
+.form__group--date-wrap
+	position: relative
+	.daterangepicker
+		left: 0 !important
+		right: auto  !important
+		align-items: center
+		min-width: 486px
+
 
 .product
 	&__locations
@@ -2460,17 +2487,7 @@ a.logo
 		&-btn
 			width: 15.1754386%
 			margin-bottom: 3px
-		.SumoSelect>.CaptionCont>label>i
-			top: 2px
-		.form__group .SumoSelect > .CaptionCont > label i
-			width: 7px
-			height: 11px
-		.form__group .SumoSelect > .CaptionCont, .form__group .SumoSelect.open > .CaptionCont, .form__group .SumoSelect:focus > .CaptionCont, .form__group .SumoSelect:hover > .CaptionCont
-			height: 30px
-			line-height: 30px
-		.form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span
-			line-height: 19px
-			font-size: 13px
+		
 		&-form
 			.form__group-content
 				display: -webkit-flex
@@ -2583,10 +2600,7 @@ a.logo
 		min-height: 10rem
 	.contacts-inner__info
 		padding-right: 4%
-	.form__group .SumoSelect > .CaptionCont > span, .form__group .SumoSelect.open > .CaptionCont > span, .form__group .SumoSelect:focus > .CaptionCont > span, .form__group .SumoSelect:hover > .CaptionCont > span
-		font-size: 11px
-	.product__reservation-cta .SumoSelect>.CaptionCont>span
-		padding-right: 24px
+	
 	.product__reservation-cta
 		width: 77%
 	.product__reservation-person
@@ -2677,9 +2691,7 @@ a.logo
 		font-size: 10px
 	.header__phone
 		margin-right: 1.5rem
-	.villas__filter .form__group .SumoSelect > .CaptionCont > span, .villas__filter .form__group .SumoSelect.open > .CaptionCont > span, .villas__filter .form__group .SumoSelect:focus > .CaptionCont > span, .villas__filter .form__group .SumoSelect:hover > .CaptionCont > span
-		font-size: 11px
-		line-height: 20px
+	
 
 @media screen and (max-width: 820px)
 	.advantages__img
