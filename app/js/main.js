@@ -60,6 +60,7 @@ jQuery(document).ready(function ($) {
 
         function trigger() {
             var beachValue = $('#js-select-beach').val();
+            console.log(beachValue)
             if (!beachValue) {
                 $('input[name="user_complex"]').addClass('disabled-input')
             } else {
@@ -69,7 +70,7 @@ jQuery(document).ready(function ($) {
 
         trigger();
 
-        $('#js-select-beach').on('selectmenuchange', function() {
+        $('#js-select-beach').on('change.fs', function() {
             trigger();
         });
    
@@ -257,7 +258,7 @@ jQuery(document).ready(function ($) {
     }
 
     $('.styled-select').each(function() {
-        $(this).selectmenu();
+        $(this).fancySelect();
     })
 
     if ($('#js-select-date').length) {
@@ -275,10 +276,12 @@ jQuery(document).ready(function ($) {
             $('#js-select-date').daterangepicker({
                 opens: 'left',
                 startDate: moment(),
+                autoUpdateInput: false,
                 endDate: moment().add(5, 'days'),
                 parentEl: '.data-choose',
                 locale: {
                     format: 'DD-MM-YYYY',
+                    cancelLabel: 'Clear',
                 },
                 isInvalidDate: function (date) {
                     for (var i = 0; i < dates.length; i++) {
@@ -297,10 +300,12 @@ jQuery(document).ready(function ($) {
             $('#js-select-date').daterangepicker({
                 opens: 'left',
                 startDate: moment(),
+                autoUpdateInput: false,
                 endDate: moment().add(5, 'days'),
                 parentEl: '.data-choose',
                 locale: {
                     format: 'DD-MM-YYYY',
+                    cancelLabel: 'Clear',
                 },
             });
         }

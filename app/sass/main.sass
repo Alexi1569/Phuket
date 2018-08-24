@@ -23,6 +23,71 @@ $text: #303030
 .ui-autocomplete
 	box-shadow: 0 0 5px 0 rgba(#000, .3)
 
+body div.fancy-select div.trigger
+	width: 100%
+	height: 30px
+	border-radius: 0
+	background-color: #fff
+	box-shadow: none
+	border: 1px solid #c5c5c5
+	color: #333
+	font-family: $reg
+	font-size: 13px
+	font-weight: normal
+	padding: 0 1rem
+	line-height: 30px
+	text-transform: none
+
+body div.fancy-select ul.options
+body div.fancy-select ul.options.open,
+	top: 35px	
+
+body div.fancy-select div.trigger.open
+	background-color: #fff
+	box-shadow: none
+	border: 1px solid #c5c5c5
+
+body div.fancy-select ul.options li.selected
+	background-color: #E4E4E4
+	color: #333
+
+body div.fancy-select ul.options li.selected:hover
+	color: #333
+
+body div.fancy-select ul.options li:hover
+	color: #333
+
+body div.fancy-select select:focus + div.trigger
+	box-shadow: none
+
+body div.fancy-select ul.options
+	text-transform: none
+	background-color: #fff
+	box-shadow: 2px 3px 3px rgba(0,0,0,.11)
+	border: 1px solid #ddd
+	border-radius: 0
+	font-weight: normal
+	color: #333
+	
+
+
+body div.fancy-select ul.options li
+	padding: 6px
+	border-bottom: 1px solid #f5f5f5
+	font-size: 11px
+
+
+body div.fancy-select div.trigger:after
+	border: 0
+	background: url(../img/header-language-arrow.svg) no-repeat center
+	background-size: cover
+	width: 8px
+	height: 8px
+	right: 1rem
+	top: 50%
+	transform: translateY(-50%) rotate(-90deg)
+	
+
 .wpcf7-response-output
 	font-size: .7em
 	background-color: #eee
