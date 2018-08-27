@@ -2,7 +2,42 @@
 jQuery(document).ready(function ($) {
 
     $('#js-select-date').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        $(this).val(picker.startDate.format('DD-MM-YYYY') + ' - ' + picker.endDate.format('DD-MM-YYYY'));
+    });
+
+    $('#js-select-date').on('show.daterangepicker', function(ev, picker) {
+        $('#date-modal').modal();
+    });
+
+    (function() {
+        if ($('#js-seo-content').length) {
+            var content = $('#js-seo-content');
+            var btn = $(content).find('a.product__descr-link');
+            var count = $(content).find('p');
+            var link = null;
+            if ($(count).length > 3) {
+                link = document.createElement('a');
+                link.classList.add('product__descr-link');
+                link.id = 'js-product-descr-toggle';
+                link.textContent = 'Показать ещё';
+                $(content).append(link);
+            }
+
+            $(link).on('click', function() {
+                $(content).toggleClass('active');
+
+                if ($(content).hasClass('active')) {
+                    link.textContent = 'Скрыть';
+                } else {
+                    link.textContent = 'Показать ещё';
+                }
+            });
+
+        }
+    })();
+
+    $('#js-select-date').on('hide.daterangepicker', function(ev, picker) {
+        $('a.close-modal').trigger('click');
     });
 
     $('#js-select-date').on('cancel.daterangepicker', function(ev, picker) {
@@ -60,7 +95,6 @@ jQuery(document).ready(function ($) {
 
         function trigger() {
             var beachValue = $('#js-select-beach').val();
-            console.log(beachValue)
             if (!beachValue) {
                 $('input[name="user_complex"]').addClass('disabled-input')
             } else {
@@ -275,9 +309,7 @@ jQuery(document).ready(function ($) {
 
             $('#js-select-date').daterangepicker({
                 opens: 'left',
-                startDate: moment(),
                 autoUpdateInput: false,
-                endDate: moment().add(5, 'days'),
                 parentEl: '.data-choose',
                 locale: {
                     format: 'DD-MM-YYYY',
@@ -299,9 +331,7 @@ jQuery(document).ready(function ($) {
         } else {
             $('#js-select-date').daterangepicker({
                 opens: 'left',
-                startDate: moment(),
                 autoUpdateInput: false,
-                endDate: moment().add(5, 'days'),
                 parentEl: '.data-choose',
                 locale: {
                     format: 'DD-MM-YYYY',
