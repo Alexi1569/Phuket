@@ -38,6 +38,33 @@ body div.fancy-select div.trigger
 	line-height: 30px
 	text-transform: none
 
+.product__slide-img iframe
+	max-width: 100%
+	height: auto
+
+.inner--advantages
+	p:not(.caption-inner)
+		margin-bottom: 0.3rem
+		&:last-of-type
+			margin-bottom: 0
+	ul,
+	ol
+		list-style-type: none
+		margin-bottom: 0.5rem
+		li
+			position: relative
+			padding-left: 12px
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 8px
+				height: 4px
+				width: 4px
+				border-radius: 50%
+				background-color: #3b7893
+
 body div.fancy-select ul.options
 body div.fancy-select ul.options.open,
 	top: 35px	
@@ -2854,9 +2881,13 @@ a.logo
 @media screen and (max-width: 767px)
 	.header__nav.header__nav--left
 		padding-right: 4rem
+	.inner--advantages ul li:before, .inner--advantages ol li:before
+		top: 6px
 	.rent-page .product__details
 		border-bottom: 0
 		padding-bottom: 0
+	.inner--advantages
+		font-size: 13px
 	.footer__develop
 		justify-content: center
 		align-items: center
