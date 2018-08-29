@@ -193,6 +193,7 @@ jQuery(document).ready(function ($) {
         $productsSlider.slick({
             slidesToShow: 1,
             centerMode: true,
+            touchThreshold: 5000,
             cssEase: 'ease-in-out',
             centerPadding: '0px',
             speed: 450,
@@ -205,6 +206,7 @@ jQuery(document).ready(function ($) {
         $('#js-product-previews').slick({
             slidesToShow: 2,
             centerMode: true,
+            touchThreshold: 5000,
             variableWidth: true,
             speed: 450,
             cssEase: 'ease-in-out',
@@ -420,6 +422,7 @@ jQuery(document).ready(function ($) {
             appendArrows: '.complexes__controls',
             slidesToShow: 3,
             slidesToScroll: 3,
+            touchThreshold: 5000,
             prevArrow: '<button class="arrow arrow--prev"></button>',
             nextArrow: '<button class="arrow arrow--next"></button>',
             responsive: [
@@ -446,6 +449,7 @@ jQuery(document).ready(function ($) {
             appendArrows: '.articles__controls',
             slidesToShow: 4,
             slidesToScroll: 4,
+            touchThreshold: 5000,
             prevArrow: '<button class="arrow arrow--prev"></button>',
             nextArrow: '<button class="arrow arrow--next"></button>',
             responsive: [
@@ -479,7 +483,8 @@ jQuery(document).ready(function ($) {
             appendDots: '.reviews__controls',
             dotsClass: 'reviews__controls-dots',
             arrows: false,
-            dots: true
+            dots: true,
+            touchThreshold: 5000,
         });
     }
 });

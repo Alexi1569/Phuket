@@ -75,8 +75,15 @@ gulp.task('clear', function() {
 
 gulp.task('js-optimize', function() {
 	return gulp.src([
-		'app/js/**/*.js',
-		'app/libs/**/*.js'
+		'app/libs/moment.min.js',
+		'app/libs/daterangepicker.js',
+		'app/libs/fancySelect.js',
+		'app/libs/jquery.mmenu.all.js',
+		'app/libs/jquery.modal.min.js',
+		'app/libs/jquery-ui.min.js',
+		'app/libs/slick.min.js',
+		'app/libs/comments.js',
+		'app/js/main.js',
 	])
 		.pipe(concat('main.min.js'))
 		.pipe(gulp.dest('build/js'))
