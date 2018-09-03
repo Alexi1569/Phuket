@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  appearence: none;
 }
 
 .map-section {
@@ -1531,9 +1532,6 @@ a.logo img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.complexes__banner h1 {
   font-size: 1.0625em;
   color: #fff;
   text-transform: uppercase;
@@ -1814,6 +1812,10 @@ a.logo img {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.offers__item-info--inner {
+  width: 100%;
 }
 
 .offers__item-title {
@@ -2975,14 +2977,14 @@ a.logo img {
   column-count: 2;
 }
 
-.product__descr p {
+.product__descr p:not(.product__descr-title) {
   font-size: 0.8125em;
   line-height: 1.69230769;
   color: #474646;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0;
 }
 
-.product__descr p:last-of-type {
+.product__descr p:not(.product__descr-title):not(.product__descr-title):last-of-type {
   margin-bottom: 0;
 }
 

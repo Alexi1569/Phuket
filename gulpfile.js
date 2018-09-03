@@ -1,4 +1,4 @@
-var gulp         = require('gulp'),
+﻿var gulp         = require('gulp'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
@@ -77,7 +77,6 @@ gulp.task('js-optimize', function() {
 	return gulp.src([
 		'app/libs/moment.min.js',
 		'app/libs/daterangepicker.js',
-		'app/libs/fancySelect.js',
 		'app/libs/jquery.mmenu.all.js',
 		'app/libs/jquery.modal.min.js',
 		'app/libs/jquery-ui.min.js',

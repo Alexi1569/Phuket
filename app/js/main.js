@@ -104,11 +104,15 @@ jQuery(document).ready(function ($) {
 
         trigger();
 
-        $('#js-select-beach').on('change.fs', function() {
+        $('#js-select-beach').on('selectmenuchange', function() {
             trigger();
         });
    
     })();
+
+    $('body').delegate('.ui-autocomplete-input', 'click', function(e) {
+        $(this).focus();
+    });
 
 
     $(document).click(function(e) {
@@ -294,7 +298,7 @@ jQuery(document).ready(function ($) {
     }
 
     $('.styled-select').each(function() {
-        $(this).fancySelect();
+        $(this).selectmenu();
     })
 
     if ($('#js-select-date').length) {

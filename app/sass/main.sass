@@ -12,6 +12,7 @@ $text: #303030
 	margin: 0
 	padding: 0
 	box-sizing: border-box
+	appearence: none
 
 .map-section
 	overflow: hidden
@@ -1190,14 +1191,13 @@ a.logo
 		display: flex
 		align-items: center
 		justify-content: center
-		h1
-			font-size: 1.0625em
-			color: #fff
-			text-transform: uppercase
-			letter-spacing: 0.0001em
-			padding: 1rem 0
-			text-align: center
-			line-height: 1.3
+		font-size: 1.0625em
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 0.0001em
+		padding: 1rem 0
+		text-align: center
+		line-height: 1.3
 	.slick-list
 		margin: 0 -0.84375rem
 	.slick-slide
@@ -1402,6 +1402,8 @@ a.logo
 			flex-direction: column
 			justify-content: space-between
 			align-items: flex-start
+			&--inner
+				width: 100%
 		&-title
 			font-family: $bold
 			letter-spacing: 0.001em
@@ -2239,12 +2241,12 @@ a.logo
 			margin-bottom: 0.8rem
 		.container--text
 			column-count: 2
-		p
+		p:not(.product__descr-title)
 			font-size: 0.8125em
 			line-height: 1.69230769
 			color: #474646
-			margin-bottom: 0.7rem
-			&:last-of-type
+			margin-bottom: 0
+			&:not(.product__descr-title):last-of-type
 				margin-bottom: 0
 
 .seo__content-text
